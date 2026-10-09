@@ -19,6 +19,8 @@ description: "Formalize mathematical definitions and theorems in Lean 4 and Math
 
 Read [proof playbook](references/proof-playbook.md) for examples, tactic choices and acceptance checks. [CoreProof.lean](assets/CoreProof.lean) demonstrates an explicit witness without Mathlib; [MathlibProof.lean](assets/MathlibProof.lean) uses polynomial normalization. Use `debug-lean4-proofs` for elaboration or tactic failures without weakening the theorem.
 
+For an existing implementation, use [improve-lean4-code](../improve-lean4-code/SKILL.md) when refactoring is the task, [analyze-lean4-code](../analyze-lean4-code/SKILL.md) for weakness analysis, or [check-lean4-idiomaticity](../check-lean4-idiomaticity/SKILL.md) for a dedicated style review. Load these neighboring skills only when available and relevant.
+
 ## Host computation
 
 When the `audit-lean4-proofs` skill is installed alongside this skill, run actual Lean file checks or named theorem axiom diagnostics in a pinned project; inspect checker output and verify correspondence to the mathematical claim separately. Use its [check_project.py](../audit-lean4-proofs/scripts/check_project.py) helper and [input/command reference](../audit-lean4-proofs/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

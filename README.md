@@ -6,7 +6,9 @@ Each skill has a `SKILL.md` with its purpose and workflow, plus supporting refer
 
 For Lean 4, start with [formalize-math-proofs](formalize-math-proofs/SKILL.md), which links to skills for project setup, proof construction, Mathlib search, debugging, and auditing.
 
-30 skills include configurable command-line helpers for host calculations. Each accepts JSON with `--input`, provides a sample request with `--example`, and returns results with evidence scope and dependency versions. See the [review of all 146 skills](docs/script-review.md) for available helpers and reuse routes. For example:
+For existing Lean 4 code, use [improve-lean4-code](improve-lean4-code/SKILL.md) to enhance implementations, [analyze-lean4-code](analyze-lean4-code/SKILL.md) to investigate weaknesses, and [check-lean4-idiomaticity](check-lean4-idiomaticity/SKILL.md) to review style and library conventions.
+
+30 skills include configurable command-line helpers for host calculations. Each accepts JSON with `--input`, provides a sample request with `--example`, and returns results with evidence scope and dependency versions. The collection contains 149 skills; individual workflows link to relevant helpers and their command references. For example:
 
 ```sh
 python research-number-theory/scripts/integer_tools.py --example > /tmp/crt.json

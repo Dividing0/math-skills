@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check Lean 4 Idiomaticity"
+  short_description: "Review Lean style against project conventions"
+  default_prompt: "Use $check-lean4-idiomaticity to review this Lean code for idiomatic style and distinguish required fixes from optional improvements."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Lean 4 Code"
+  short_description: "Find and prioritize evidence-backed Lean weaknesses"
+  default_prompt: "Use $analyze-lean4-code to review this Lean code for weaknesses and report prioritized findings with concrete evidence."

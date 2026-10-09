@@ -14,6 +14,9 @@ For Lean 4, load only the specialization relevant to the current obstacle:
 - [Search Mathlib](../search-mathlib/SKILL.md) for candidate declarations, signatures and imports.
 - [Debug Lean 4 proofs](../debug-lean4-proofs/SKILL.md) for elaboration, coercion, instance and tactic failures.
 - [Audit Lean 4 proofs](../audit-lean4-proofs/SKILL.md) for statement correspondence, checker coverage and transitive axiom checks.
+- [Improve Lean 4 code](../improve-lean4-code/SKILL.md) for refactoring existing definitions, programs and proofs while preserving their contracts.
+- [Analyze Lean 4 code](../analyze-lean4-code/SKILL.md) for evidence-based findings about specification, API, runtime and maintenance weaknesses.
+- [Check Lean 4 idiomaticity](../check-lean4-idiomaticity/SKILL.md) for project-aware naming, proof structure, simplification and style reviews.
 
 These specialize the workflow below; Rocq and Isabelle tasks retain the general guidance.
 

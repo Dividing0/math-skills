@@ -9,6 +9,7 @@
 - Translate 70 Ukrainian skill headings and their display names into English.
 - Add `.gitignore` rules for macOS metadata, Python environments, caches, and build artifacts; remove tracked `.DS_Store` files.
 - Add push and pull request CI for skill validation, release packaging, Python lint and syntax checks, and helper regression tests.
+- Add three Lean 4 code skills for refactoring, weakness analysis, and idiomaticity review, with checked examples and reuse of the host checker.
 
 ## v0.1.0
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improve Lean 4 Code"
+  short_description: "Refactor Lean code while preserving its contracts"
+  default_prompt: "Use $improve-lean4-code to improve this Lean code and verify that its public contracts and behavior are preserved."

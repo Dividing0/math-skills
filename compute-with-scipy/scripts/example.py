@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Independent analytic checks for ODE, quadrature, root and sparse solve."""
 
 if not __debug__:

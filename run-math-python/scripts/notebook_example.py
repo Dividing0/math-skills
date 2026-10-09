@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Execute a notebook through a temporary kernel bound to this interpreter."""
 
 if not __debug__:

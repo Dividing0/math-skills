@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Exact rational certificate for a univariate rational polynomial on [a,b].
 Coefficients are constant-first. No floating point or numerical root assumptions.
 """

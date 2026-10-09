@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Headless analytic curve, explicit sampling and log-domain guards."""
 
 if not __debug__:

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Run an authorized Python script and persist source, logs and environment evidence.
 This is a process runner, not a security sandbox or a mathematical proof checker.
 """

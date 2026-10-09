@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Dense numerical reference, shape guard and singular-case rejection."""
 
 if not __debug__:

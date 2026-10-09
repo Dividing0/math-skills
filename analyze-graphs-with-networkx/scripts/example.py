@@ -11,6 +11,7 @@ import json
 import math
 import platform
 import sys
+from itertools import pairwise
 
 p = argparse.ArgumentParser()
 p.add_argument("--self-test", action="store_true")
@@ -51,7 +52,7 @@ def enumerate_costs(node, target, visited, total):
 
 
 assert cost == min(enumerate_costs("s", "t", {"s"}, 0)) == 7
-assert sum(g[u][v]["weight"] for u, v in zip(path, path[1:])) == cost
+assert sum(g[u][v]["weight"] for u, v in pairwise(path)) == cost
 h = nx.DiGraph()
 h.add_weighted_edges_from([("s", "a", 3), ("s", "b", 4), ("a", "b", -2), ("b", "t", 2)])
 negative_path = nx.bellman_ford_path(h, "s", "t", weight="weight")

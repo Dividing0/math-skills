@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 if not __debug__:
     raise RuntimeError(
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
@@ -49,7 +50,7 @@ try:
 except ModuleNotFoundError as exc:
     print(json.dumps({"status": "dependency-unavailable", "dependency": exc.name}))
     sys.exit(2)
-except Exception as exc:
+except (ArithmeticError, AssertionError, ImportError, RuntimeError, TypeError, ValueError) as exc:
     print(
         json.dumps(
             {"status": "failed", "error_type": type(exc).__name__, "error": str(exc)}

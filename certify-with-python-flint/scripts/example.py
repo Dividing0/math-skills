@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 if not __debug__:
     raise RuntimeError(
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
@@ -50,7 +51,7 @@ try:
     result = compute()
     result["self_test"] = "passed"
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
-except Exception as exc:
+except (ArithmeticError, AssertionError, ImportError, RuntimeError, TypeError, ValueError) as exc:
     print(
         json.dumps(
             {"status": "failed", "error_type": type(exc).__name__, "error": str(exc)}

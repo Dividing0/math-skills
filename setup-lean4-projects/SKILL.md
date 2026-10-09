@@ -21,3 +21,7 @@ Read [project playbook](references/project-playbook.md) for setup commands, fail
 ## Host computation
 
 When the `run-math-python` skill is installed alongside this skill, discover Lean/Lake executable paths without invoking or installing a toolchain; then follow this skill’s pinned project setup workflow. Use its [host_capabilities.py](../run-math-python/scripts/host_capabilities.py) helper and [input/command reference](../run-math-python/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.
+
+## Related workflow
+
+For upgrading an existing pinned project, use the migration workflow to record the baseline, coordinate Lean/Mathlib revisions and check downstream compatibility. Read [migrate-lean4-projects](../migrate-lean4-projects/SKILL.md) when that specialization is needed and available.

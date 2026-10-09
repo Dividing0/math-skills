@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Lean 4 Code"
+  short_description: "Run Lean regression cases and expected-error checks"
+  default_prompt: "Use $test-lean4-code to design and run regression cases for this Lean code, including boundary behavior and expected errors."

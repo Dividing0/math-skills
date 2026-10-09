@@ -23,3 +23,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) before selecting a domain method or declaring its decisive conclusion; it gives exact hypotheses, a worked derivation, a counterexample and handoff requirements.
+
+## Related workflow
+
+When noise and available information determine admissible policies, use the stochastic-control workflow for nonanticipativity, Bellman recursions and verification conditions. Read [research-stochastic-control](../research-stochastic-control/SKILL.md) when that specialization is needed and available.

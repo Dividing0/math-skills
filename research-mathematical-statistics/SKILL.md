@@ -29,3 +29,7 @@ Read [domain-playbook.md](references/domain-playbook.md) when choosing a domain-
 ## Host computation
 
 When the `analyze-data-with-statsmodels` skill is installed alongside this skill, fit an explicit OLS design with conventional or HC3 covariance and independent prediction rows; sampling assumptions and temporal/causal validity remain separate. Use its [fit_ols.py](../analyze-data-with-statsmodels/scripts/fit_ols.py) helper and [input/command reference](../analyze-data-with-statsmodels/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.
+
+## Related workflow
+
+For population-risk guarantees after hypothesis selection, use the learning-theory workflow to identify the comparator, class complexity and data-reuse assumptions. Read [research-statistical-learning-theory](../research-statistical-learning-theory/SKILL.md) when that specialization is needed and available.

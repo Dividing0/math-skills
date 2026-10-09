@@ -29,3 +29,7 @@ Read [domain-playbook.md](references/domain-playbook.md) when choosing a domain-
 ## Host computation
 
 When the `compute-with-scipy` skill is installed alongside this skill, use `linear-program` for an explicitly formulated finite LP; inspect solver status and feasibility, and use exact certificates when a proof is required. Use its [numerical.py](../compute-with-scipy/scripts/numerical.py) helper and [input/command reference](../compute-with-scipy/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.
+
+## Related workflow
+
+For linear mixed-integer models, use the SCIP workflow to obtain incumbents, bounds, gaps and feasibility diagnostics under explicit solver limits. Read [optimize-with-scip](../optimize-with-scip/SKILL.md) when that specialization is needed and available.

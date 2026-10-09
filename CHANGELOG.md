@@ -2,6 +2,8 @@
 
 ## v0.2.0
 
+- Add 13 dedicated skills for Lean metaprogramming, migrations, testing, Mathlib contributions, Z3, SCIP, SDEs, DAEs, Monte Carlo, mathematical cryptography, ergodic theory, statistical learning theory, and stochastic control.
+- Add 11 configurable helpers with documented mathematical limits, checked Lean fixtures, and 20 regression tests against analytic answers, finite enumeration, and invalid assumptions; include Z3 and SCIP runtimes in CI. The collection now has 162 skills and 41 configurable helpers.
 - Add 30 configurable command-line helpers for mathematical computations, certificate checks, Lean audits, plotting, and host inspection.
 - Document helper inputs, dependencies, examples, and evidence limitations; link reusable helpers from 72 additional skills.
 - Record the review of all 146 skills and retain existing workflows where additional scripts would not help.

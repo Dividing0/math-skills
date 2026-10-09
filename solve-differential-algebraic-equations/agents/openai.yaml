@@ -1,0 +1,4 @@
+interface:
+  display_name: "Solve Differential-Algebraic Equations"
+  short_description: "Solve DAEs with consistent data and constraint checks"
+  default_prompt: "Use $solve-differential-algebraic-equations to analyze this DAE, establish consistent initial data, and check constraint residuals and numerical error."

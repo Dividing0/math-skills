@@ -20,3 +20,7 @@ description: "Improve existing Lean 4 definitions, executable code and proofs th
 Read the [refactoring playbook](references/refactoring-playbook.md) for reduction-sensitive changes, performance evidence and acceptance cases. [Refactor.lean](assets/Refactor.lean) demonstrates replacing a recursive implementation with a library definition and proving pointwise equivalence.
 
 When available alongside this skill, use [search-mathlib](../search-mathlib/SKILL.md) for library discovery, [debug-lean4-proofs](../debug-lean4-proofs/SKILL.md) for a failing proof, and [check-lean4-idiomaticity](../check-lean4-idiomaticity/SKILL.md) for a dedicated style review. Use the existing [host checker](../audit-lean4-proofs/scripts/check_project.py) with its [command reference](../audit-lean4-proofs/references/command-line.md) to capture file checks and named axiom diagnostics; it does not run builds, tests or benchmarks for you. The direct Lake workflow above also works without neighboring skills.
+
+## Related workflow
+
+For repeated regression and consumer checks after a refactor, use the testing workflow with positive cases and explicit expected diagnostics. Read [test-lean4-code](../test-lean4-code/SKILL.md) when that specialization is needed and available.

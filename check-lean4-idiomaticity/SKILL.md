@@ -20,3 +20,7 @@ description: "Review Lean 4 code for idiomatic definitions, proof structure, nam
 Read the [idiomaticity guide](references/idiomaticity-guide.md) for naming distinctions, acceptance cases and primary sources. [Idioms.lean](assets/Idioms.lean) compares an unnecessarily indirect proof with a direct proof of the identical statement.
 
 When available, use [improve-lean4-code](../improve-lean4-code/SKILL.md) for implementation changes and [analyze-lean4-code](../analyze-lean4-code/SKILL.md) for correctness or design weaknesses. The existing [host checker](../audit-lean4-proofs/scripts/check_project.py), described in its [command reference](../audit-lean4-proofs/references/command-line.md), captures real Lean diagnostics. It is not a style linter; successful compilation is only one part of this review. Without neighboring skills, run `lake env lean Path/To/File.lean` and the project's actual build and lint commands directly.
+
+## Related workflow
+
+When preparing an upstream Mathlib patch, use the contribution workflow for placement, existing-result discovery and current contributor requirements. Read [contribute-to-mathlib](../contribute-to-mathlib/SKILL.md) when that specialization is needed and available.

@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/Dividing0/math-skills/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Dividing0/math-skills/actions/workflows/ci.yml)
 
-A collection of **149 agent skills** for mathematical research, proofs, modeling, computation, and Lean 4 formalization. **30 skills** include configurable command-line helpers for host calculations.
+A collection of **162 agent skills** for mathematical research, proofs, modeling, computation, and Lean 4 formalization. **41 skills** include configurable command-line helpers for host calculations.
 
 ## Getting started
 
@@ -53,6 +53,28 @@ Start with [formalize-math-proofs](formalize-math-proofs/SKILL.md), or choose a 
 | Refactor and enhance existing code | [improve-lean4-code](improve-lean4-code/SKILL.md) |
 | Investigate code weaknesses | [analyze-lean4-code](analyze-lean4-code/SKILL.md) |
 | Review style and library conventions | [check-lean4-idiomaticity](check-lean4-idiomaticity/SKILL.md) |
+| Build macros, elaborators, and tactics | [metaprogram-lean4](metaprogram-lean4/SKILL.md) |
+| Upgrade toolchains and library versions | [migrate-lean4-projects](migrate-lean4-projects/SKILL.md) |
+| Test programs, extensions, and expected errors | [test-lean4-code](test-lean4-code/SKILL.md) |
+| Prepare upstream library contributions | [contribute-to-mathlib](contribute-to-mathlib/SKILL.md) |
+
+## Specialized computation and research
+
+These workflows complement the collection's symbolic, numerical, proof, and modeling skills:
+
+| Task | Skill | Included helper |
+|---|---|---|
+| SMT constraints and counterexamples | [solve-with-z3](solve-with-z3/SKILL.md) | Models, unsatisfiable cores, and solver status |
+| Mixed-integer optimization | [optimize-with-scip](optimize-with-scip/SKILL.md) | Linear MILP solutions, bounds, gaps, and residuals |
+| Stochastic differential equations | [simulate-stochastic-differential-equations](simulate-stochastic-differential-equations/SKILL.md) | Coupled Euler–Maruyama and Milstein paths for scalar GBM |
+| Differential-algebraic equations | [solve-differential-algebraic-equations](solve-differential-algebraic-equations/SKILL.md) | Constant linear index-one DAE checks and refinement |
+| Monte Carlo estimation | [compute-with-monte-carlo](compute-with-monte-carlo/SKILL.md) | Polynomial integration with variance reduction |
+| Mathematical cryptography | [research-mathematical-cryptography](research-mathematical-cryptography/SKILL.md) | Exact finite secrecy and decryptability analysis |
+| Ergodic theory | [research-ergodic-theory](research-ergodic-theory/SKILL.md) | Finite invariant measures, cycles, and mixing |
+| Statistical learning theory | [research-statistical-learning-theory](research-statistical-learning-theory/SKILL.md) | Conditional finite-class generalization bounds |
+| Stochastic control | [research-stochastic-control](research-stochastic-control/SKILL.md) | Exact finite-horizon MDP policies and values |
+
+Each skill covers the broader mathematical workflow; its helper implements the limited task family shown above. Read the command reference for assumptions and input limits.
 
 ## Command-line helpers
 
@@ -83,10 +105,10 @@ Pyright checks all repository Python files in standard mode. Scientific runtimes
 Run the helper regression suite in an isolated dependency environment:
 
 ```sh
-uv run --with pyyaml --with sympy --with numpy --with scipy --with networkx --with statsmodels --with matplotlib python -m unittest discover -s tests -v
+uv run --with pyyaml --with sympy --with numpy --with scipy --with networkx --with statsmodels --with matplotlib --with z3-solver --with pyscipopt python -m unittest discover -s tests -v
 ```
 
-The Lean integration test also runs when Elan and a Lean 4 toolchain are installed; otherwise it is skipped.
+Lean integration tests also run when Elan and a Lean 4 toolchain are installed; otherwise they are skipped. They use installed toolchains without downloading one and check proof audits, macros, and positive/negative fixtures. An installed but broken toolchain fails the checks.
 
 ### Continuous integration
 

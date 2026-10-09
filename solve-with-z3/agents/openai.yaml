@@ -1,0 +1,4 @@
+interface:
+  display_name: "Solve with Z3"
+  short_description: "Solve SMT queries with models and explicit solver status"
+  default_prompt: "Use $solve-with-z3 to encode this constraint problem, run Z3, and interpret the model, unsatisfiable core, or unknown result."

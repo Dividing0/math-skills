@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Statistical Learning Theory"
+  short_description: "Check generalization bounds and learning assumptions"
+  default_prompt: "Use $research-statistical-learning-theory to derive and check a generalization guarantee with an explicit hypothesis class, comparator, and sampling assumptions."

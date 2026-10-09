@@ -29,3 +29,7 @@ Read [domain-playbook.md](references/domain-playbook.md) when choosing a theorem
 ## Host computation
 
 When the `compute-with-scipy` skill is installed alongside this skill, use `polynomial-ivp` for a specified autonomous polynomial vector field; a successful trajectory is numerical evidence with local solver tolerances. Use its [numerical.py](../compute-with-scipy/scripts/numerical.py) helper and [input/command reference](../compute-with-scipy/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.
+
+## Related workflow
+
+When algebraic constraints accompany differential equations, use the DAE workflow to establish consistent initial data, index assumptions and constraint residuals. Read [solve-differential-algebraic-equations](../solve-differential-algebraic-equations/SKILL.md) when that specialization is needed and available.

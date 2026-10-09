@@ -17,6 +17,10 @@ For Lean 4, load only the specialization relevant to the current obstacle:
 - [Improve Lean 4 code](../improve-lean4-code/SKILL.md) for refactoring existing definitions, programs and proofs while preserving their contracts.
 - [Analyze Lean 4 code](../analyze-lean4-code/SKILL.md) for evidence-based findings about specification, API, runtime and maintenance weaknesses.
 - [Check Lean 4 idiomaticity](../check-lean4-idiomaticity/SKILL.md) for project-aware naming, proof structure, simplification and style reviews.
+- [Metaprogram Lean 4](../metaprogram-lean4/SKILL.md) for hygienic macros, elaborators and kernel-checked tactics.
+- [Migrate Lean 4 projects](../migrate-lean4-projects/SKILL.md) for coordinated toolchain/library upgrades and compatibility checks.
+- [Test Lean 4 code](../test-lean4-code/SKILL.md) for repeatable regression cases, consumer checks and expected diagnostics.
+- [Contribute to Mathlib](../contribute-to-mathlib/SKILL.md) for library placement, reuse, contribution policy and local validation.
 
 These specialize the workflow below; Rocq and Isabelle tasks retain the general guidance.
 

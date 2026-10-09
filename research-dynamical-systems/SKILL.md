@@ -29,3 +29,7 @@ Read [domain-playbook.md](references/domain-playbook.md) when choosing a domain-
 ## Host computation
 
 When the `compute-with-sympy` skill is installed alongside this skill, use `dynamics` for an autonomous field Jacobian, equilibrium residual or candidate invariant Lie derivative; local symbolic identities do not settle global behavior. Use its [calculate.py](../compute-with-sympy/scripts/calculate.py) helper and [input/command reference](../compute-with-sympy/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.
+
+## Related workflow
+
+For invariant probability measures, almost-everywhere orbit averages and mixing claims, use the ergodic-theory workflow with exact theorem hypotheses. Read [research-ergodic-theory](../research-ergodic-theory/SKILL.md) when that specialization is needed and available.

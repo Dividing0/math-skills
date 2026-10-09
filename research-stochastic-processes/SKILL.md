@@ -29,3 +29,7 @@ Read [domain-playbook.md](references/domain-playbook.md) before selecting a doma
 ## Runnable helper
 
 Use [markov_chain.py](scripts/markov_chain.py) to solve stationary distributions of a finite rational Markov chain without claiming mixing. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.
+
+## Related workflow
+
+For numerical SDE paths, use the simulation workflow to select the stochastic convention, couple refinement levels and separate sampling from discretization error. Read [simulate-stochastic-differential-equations](../simulate-stochastic-differential-equations/SKILL.md) when that specialization is needed and available.

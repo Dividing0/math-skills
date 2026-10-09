@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Ergodic Theory"
+  short_description: "Analyze invariant measures, ergodicity, and mixing"
+  default_prompt: "Use $research-ergodic-theory to analyze this measure-preserving system, verify theorem hypotheses, and distinguish ergodicity from mixing."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Metaprogram Lean 4"
+  short_description: "Build checked Lean macros, elaborators, and tactics"
+  default_prompt: "Use $metaprogram-lean4 to implement this Lean syntax or tactic extension with hygienic quotations and checked examples."

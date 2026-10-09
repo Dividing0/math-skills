@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Stochastic Control"
+  short_description: "Analyze stochastic policies and Bellman verification"
+  default_prompt: "Use $research-stochastic-control to analyze this stochastic control problem using admissible policies, Bellman equations, and appropriate verification conditions."

@@ -29,3 +29,7 @@ Read [domain-playbook.md](references/domain-playbook.md) before selecting a doma
 ## Runnable helper
 
 Use [truth_table.py](scripts/truth_table.py) to exhaustively check a classical propositional formula encoded as a JSON tree. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.
+
+## Related workflow
+
+For executable SMT encodings, models and conflicting assertion sets, use the Z3 workflow; preserve the intended sorts and distinguish unknown from unsatisfiable. Read [solve-with-z3](../solve-with-z3/SKILL.md) when that specialization is needed and available.

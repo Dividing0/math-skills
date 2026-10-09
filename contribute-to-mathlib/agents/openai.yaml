@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare Mathlib Contributions"
+  short_description: "Prepare focused Mathlib patches with local evidence"
+  default_prompt: "Use $contribute-to-mathlib to prepare this mathematical result as a focused Mathlib patch with appropriate placement and local validation."

@@ -29,3 +29,7 @@ Read [domain-playbook.md](references/domain-playbook.md) when selecting concrete
 ## Runnable helper
 
 Use [integer_tools.py](scripts/integer_tools.py) to compute exact generalized CRT solutions and Bezout witnesses. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.
+
+## Related workflow
+
+For number-theoretic cryptographic constructions, use the cryptography workflow to state correctness, security experiments, hardness assumptions and reduction losses separately. Read [research-mathematical-cryptography](../research-mathematical-cryptography/SKILL.md) when that specialization is needed and available.

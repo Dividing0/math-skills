@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrate Lean 4 Projects"
+  short_description: "Migrate Lean and Mathlib pins with compatibility checks"
+  default_prompt: "Use $migrate-lean4-projects to migrate this Lean project to the requested versions, record pin changes, and verify compatibility."

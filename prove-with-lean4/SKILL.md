@@ -24,3 +24,7 @@ For an existing implementation, use [improve-lean4-code](../improve-lean4-code/S
 ## Host computation
 
 When the `audit-lean4-proofs` skill is installed alongside this skill, run actual Lean file checks or named theorem axiom diagnostics in a pinned project; inspect checker output and verify correspondence to the mathematical claim separately. Use its [check_project.py](../audit-lean4-proofs/scripts/check_project.py) helper and [input/command reference](../audit-lean4-proofs/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.
+
+## Related workflow
+
+When reusable proof automation requires a macro, elaborator or tactic extension, use the metaprogramming workflow and check its generated proof terms. Read [metaprogram-lean4](../metaprogram-lean4/SKILL.md) when that specialization is needed and available.

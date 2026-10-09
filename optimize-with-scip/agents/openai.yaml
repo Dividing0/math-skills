@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize with SCIP"
+  short_description: "Solve mixed-integer models and inspect optimality gaps"
+  default_prompt: "Use $optimize-with-scip to formulate and solve this mixed-integer model and report feasibility, bounds, gaps, and solver status."

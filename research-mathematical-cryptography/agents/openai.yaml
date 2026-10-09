@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Mathematical Cryptography"
+  short_description: "Analyze security definitions and exact finite schemes"
+  default_prompt: "Use $research-mathematical-cryptography to analyze this cryptographic construction with explicit correctness, security games, assumptions, and reduction losses."

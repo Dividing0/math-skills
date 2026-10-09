@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compute with Monte Carlo"
+  short_description: "Estimate integrals with reproducible sampling errors"
+  default_prompt: "Use $compute-with-monte-carlo to estimate this integral or expectation with reproducible samples and justified uncertainty reporting."

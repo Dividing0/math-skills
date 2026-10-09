@@ -1,0 +1,4 @@
+interface:
+  display_name: "Simulate Stochastic Differential Equations"
+  short_description: "Simulate SDEs with coupled paths and error checks"
+  default_prompt: "Use $simulate-stochastic-differential-equations to simulate this stochastic model with the correct convention, coupled refinement, and sampling diagnostics."

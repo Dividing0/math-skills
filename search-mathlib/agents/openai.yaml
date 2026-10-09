@@ -1,0 +1,4 @@
+interface:
+  display_name: "Search Mathlib"
+  short_description: "Find matching Mathlib lemmas and required imports"
+  default_prompt: "Use $search-mathlib to find a theorem matching this goal and check its signature, hypotheses and imports."

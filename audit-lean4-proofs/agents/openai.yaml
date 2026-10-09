@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Lean 4 Proofs"
+  short_description: "Check theorem meaning, placeholders and axioms"
+  default_prompt: "Use $audit-lean4-proofs to review this theorem for statement correspondence, checker coverage and axiom dependencies."

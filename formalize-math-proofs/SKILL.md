@@ -5,6 +5,18 @@ description: "Translate exact mathematical statements and proofs into a project 
 
 # Formalize Math Proofs
 
+## Lean 4 specializations
+
+For Lean 4, load only the specialization relevant to the current obstacle:
+
+- [Set up Lean 4 projects](../setup-lean4-projects/SKILL.md) for pinned toolchains, Lake, Mathlib dependencies and caches.
+- [Prove with Lean 4](../prove-with-lean4/SKILL.md) for statement translation and incremental proof construction.
+- [Search Mathlib](../search-mathlib/SKILL.md) for candidate declarations, signatures and imports.
+- [Debug Lean 4 proofs](../debug-lean4-proofs/SKILL.md) for elaboration, coercion, instance and tactic failures.
+- [Audit Lean 4 proofs](../audit-lean4-proofs/SKILL.md) for statement correspondence, checker coverage and transitive axiom checks.
+
+These specialize the workflow below; Rocq and Isabelle tasks retain the general guidance.
+
 ## Workflow
 
 1. Choose the assistant from the user request or existing project; inspect pinned versions, dependencies and established notation.

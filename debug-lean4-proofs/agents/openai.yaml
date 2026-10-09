@@ -1,0 +1,4 @@
+interface:
+  display_name: "Debug Lean 4 Proofs"
+  short_description: "Diagnose Lean elaboration and tactic failures"
+  default_prompt: "Use $debug-lean4-proofs to diagnose this failing proof and verify a repair that preserves its statement."

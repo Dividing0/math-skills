@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set Up Lean 4 Projects"
+  short_description: "Configure reproducible Lean 4 and Mathlib builds"
+  default_prompt: "Use $setup-lean4-projects to configure this Lean 4 mathematical project with compatible pins and verify its build."

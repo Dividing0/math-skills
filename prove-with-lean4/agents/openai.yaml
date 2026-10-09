@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prove with Lean 4"
+  short_description: "Construct and check mathematical proofs in Lean 4"
+  default_prompt: "Use $prove-with-lean4 to formalize this mathematical statement and check the resulting proof in the project."

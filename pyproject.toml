@@ -1,0 +1,12 @@
+[project]
+name = "math-skills"
+version = "0.1.0"
+description = "Mathematical skills to work with ChatGPT"
+readme = "README.md"
+authors = [
+    { name = "Yehor Smoliakov", email = "yehors@ukr.net" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "ruff>=0.16.10",
+]

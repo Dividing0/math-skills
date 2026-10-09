@@ -1,0 +1,56 @@
+name: Validate skills and scripts
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: skills-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+
+      - name: Install validation and test dependencies
+        run: >-
+          python -m pip install
+          'PyYAML==6.0.3' 'ruff==0.16.10'
+          sympy numpy scipy networkx statsmodels matplotlib
+
+      - name: Lint Python scripts
+        run: ruff check
+
+      - name: Check syntax of all tracked Python files
+        run: |
+          python - <<'PY'
+          import subprocess
+          from pathlib import Path
+
+          paths = subprocess.check_output(
+              ["git", "ls-files", "-z", "--", "*.py"]
+          ).decode().split("\0")
+          for path in filter(None, paths):
+              compile(Path(path).read_bytes(), path, "exec")
+          PY
+
+      - name: Validate skill metadata, links, and release packaging
+        run: python -B scripts/release_skills.py --output "$RUNNER_TEMP/math-skills.zip"
+
+      - name: Run helper regression tests
+        run: python -B -m unittest discover -s tests -v

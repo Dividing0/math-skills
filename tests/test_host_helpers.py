@@ -17,6 +17,8 @@ sys.dont_write_bytecode = True
 def load(skill, filename):
     path = ROOT / skill / "scripts" / filename
     spec = importlib.util.spec_from_file_location(skill, path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"Cannot load helper module from {path}")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module

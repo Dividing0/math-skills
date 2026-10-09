@@ -53,7 +53,7 @@ def compute(data):
         graph.add_edge(u, v, weight=weight)
     components = (
         nx.weakly_connected_components(graph)
-        if directed
+        if isinstance(graph, nx.DiGraph)
         else nx.connected_components(graph)
     )
     result = {
@@ -118,7 +118,7 @@ def compute(data):
             duality_gap=value - cut,
         )
     elif op == "summary":
-        if directed:
+        if isinstance(graph, nx.DiGraph):
             result["strong_components"] = [
                 list(c) for c in nx.strongly_connected_components(graph)
             ]

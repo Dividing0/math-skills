@@ -30,11 +30,14 @@ jobs:
       - name: Install validation and test dependencies
         run: >-
           python -m pip install
-          'PyYAML==6.0.3' 'ruff==0.16.10'
+          'PyYAML==6.0.3' 'ruff==0.16.10' 'pyright==1.1.414'
           sympy numpy scipy networkx statsmodels matplotlib
 
       - name: Lint Python scripts
         run: ruff check
+
+      - name: Type-check Python scripts
+        run: pyright --warnings
 
       - name: Check syntax of all tracked Python files
         run: |

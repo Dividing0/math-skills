@@ -132,6 +132,7 @@ def compute(data):
         return str(value)
 
     operation = data["operation"]
+    result: dict[str, object]
     if operation in {
         "simplify",
         "factor",

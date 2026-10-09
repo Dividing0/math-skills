@@ -36,6 +36,7 @@ def compute(data):
 
     op = data["operation"]
     if op in {"linear-program", "transport"}:
+        cost = None
         if op == "linear-program":
             c = array(data["c"], 1)
             A = array(data["A_ub"], 2) if "A_ub" in data else None
@@ -103,7 +104,7 @@ def compute(data):
                 ]
             )
         )
-        if op == "transport":
+        if cost is not None:
             result["plan"] = x.reshape(cost.shape).tolist()
         return result
     if op != "polynomial-ivp":

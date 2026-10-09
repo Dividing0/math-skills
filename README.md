@@ -19,7 +19,10 @@ To check the Python scripts:
 
 ```sh
 uv run ruff check
+uv run pyright --warnings
 ```
+
+Pyright checks all repository Python files in standard mode. Scientific runtimes are installed per skill, so missing optional imports are not reported; library types come from available stubs and typed packages rather than inference from untyped library source. Runtime checks still require the relevant dependencies.
 
 Run the helper regression suite in an isolated dependency environment (Lean checks also run when Elan and a Lean 4 toolchain are installed):
 
@@ -27,6 +30,6 @@ Run the helper regression suite in an isolated dependency environment (Lean chec
 uv run --with sympy --with numpy --with scipy --with networkx --with statsmodels --with matplotlib python -m unittest discover -s tests -v
 ```
 
-Every push and pull request runs CI to lint and syntax-check Python files, validate skill metadata and links, check release packaging, and run the helper regression suite. The Lean integration test is skipped when no Lean toolchain is installed on the runner.
+Every push and pull request runs CI to lint, type-check, and syntax-check Python files, validate skill metadata and links, check release packaging, and run the helper regression suite. The Lean integration test is skipped when no Lean toolchain is installed on the runner.
 
 Publishing a GitHub release (including a prerelease) validates all skill metadata and Python scripts, then uploads `math-skills.zip` as a release asset. The ZIP contains only tracked skill directories and their resources; virtual environments, caches, build artifacts, and repository tooling are excluded.

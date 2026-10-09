@@ -8,5 +8,18 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "pyright>=1.1.414",
     "ruff>=0.16.10",
 ]
+
+[tool.pyright]
+include = ["**/*.py"]
+exclude = ["**/.venv", "**/venv", "**/__pycache__", "build", "dist"]
+pythonVersion = "3.14"
+typeCheckingMode = "standard"
+# Skills provision their own optional runtimes (including SageMath and FEniCS).
+# Check our code without requiring every scientific library in the tooling env.
+reportMissingImports = false
+reportMissingModuleSource = false
+# Use published stubs/annotations rather than inferring APIs from untyped libraries.
+useLibraryCodeForTypes = false

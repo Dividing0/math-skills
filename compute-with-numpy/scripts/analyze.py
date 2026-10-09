@@ -84,7 +84,7 @@ def compute(data):
         if not np.isfinite(tol) or tol <= 0:
             raise ValueError("tolerance must be positive and finite")
         margin = (
-            float(-max(eig.real))
+            float(-max(np.real(eig)))
             if timebase == "continuous"
             else float(1 - max(abs(eig)))
         )

@@ -1,0 +1,14 @@
+{
+  "name": "math-skills",
+  "description": "Mathematical research, computation, and Lean 4 skills for Claude Code.",
+  "owner": {
+    "name": "Yehor Smoliakov"
+  },
+  "plugins": [
+    {
+      "name": "math-skills",
+      "source": "./",
+      "description": "Agent skills for mathematical research, proofs, modeling, computation, and Lean 4 development."
+    }
+  ]
+}

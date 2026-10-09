@@ -2,8 +2,10 @@
 """Validate skill metadata and package tracked skill files for a release."""
 
 import argparse
+import json
 import re
 import subprocess
+import tomllib
 from pathlib import Path, PurePosixPath
 from urllib.parse import unquote, urlsplit
 from zipfile import ZIP_DEFLATED, ZipFile
@@ -19,6 +21,10 @@ EXCLUDED_DIRECTORIES = {
     "dist",
 }
 EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".olean", ".ilean"}
+CLAUDE_METADATA = {
+    PurePosixPath(".claude-plugin/plugin.json"),
+    PurePosixPath(".claude-plugin/marketplace.json"),
+}
 
 
 def included(path):
@@ -90,11 +96,55 @@ def validate_links(root, files):
                 raise ValueError(f"{path}: link missing from package: {target}")
 
 
+def validate_claude_metadata(root):
+    """Check the root plugin/catalog contract and keep the release version aligned."""
+    plugin = json.loads((root / ".claude-plugin/plugin.json").read_text())
+    marketplace = json.loads((root / ".claude-plugin/marketplace.json").read_text())
+    project = tomllib.loads((root / "pyproject.toml").read_text())["project"]
+    if not isinstance(plugin, dict) or not isinstance(marketplace, dict):
+        raise TypeError("Claude metadata must contain JSON objects")
+    if plugin.get("name") != project["name"]:
+        raise ValueError("Claude plugin name must match the project name")
+    if plugin.get("version") != project["version"]:
+        raise ValueError("Claude plugin version must match the project version")
+    if plugin.get("skills") != ["./"]:
+        raise ValueError("Claude plugin must scan the root skill directories")
+    if (
+        not isinstance(plugin.get("description"), str)
+        or not plugin["description"].strip()
+    ):
+        raise ValueError("Claude plugin description must be a nonempty string")
+    for label, owner in (
+        ("plugin author", plugin.get("author")),
+        ("marketplace owner", marketplace.get("owner")),
+    ):
+        if (
+            not isinstance(owner, dict)
+            or not isinstance(owner.get("name"), str)
+            or not owner["name"].strip()
+        ):
+            raise ValueError(f"Claude {label} must have a nonempty name")
+    if marketplace.get("name") != project["name"]:
+        raise ValueError("Claude marketplace name must match the project name")
+    entries = marketplace.get("plugins")
+    if (
+        not isinstance(entries, list)
+        or len(entries) != 1
+        or not isinstance(entries[0], dict)
+    ):
+        raise ValueError("Claude marketplace must contain the root plugin entry")
+    entry = entries[0]
+    if entry.get("name") != plugin["name"] or entry.get("source") != "./":
+        raise ValueError("Claude marketplace entry must reference the root plugin")
+
+
 def package(root, output):
     root = root.resolve()
-    tracked = subprocess.check_output(
-        ["git", "ls-files", "-z"], cwd=root
-    ).decode().split("\0")
+    tracked = (
+        subprocess.check_output(["git", "ls-files", "-z"], cwd=root)
+        .decode()
+        .split("\0")
+    )
     skills = sorted(
         PurePosixPath(name).parts[0]
         for name in tracked
@@ -107,14 +157,19 @@ def package(root, output):
     files = {
         PurePosixPath(name)
         for name in tracked
-        if name and PurePosixPath(name).parts[0] in skills
+        if name
+        and PurePosixPath(name).parts[0] in skills
         and included(PurePosixPath(name))
     }
+    if not CLAUDE_METADATA <= {PurePosixPath(name) for name in tracked if name}:
+        raise ValueError("Claude plugin and marketplace metadata must be tracked")
+    files.update(CLAUDE_METADATA)
     for path in files:
         if (root / path).is_symlink() or not (root / path).is_file():
             raise ValueError(f"{path}: expected a regular tracked file")
     for skill in skills:
         validate_skill(root, skill, files)
+    validate_claude_metadata(root)
     validate_links(root, files)
 
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -131,7 +186,13 @@ def main():
     root = Path(__file__).resolve().parents[1]
     try:
         package(root, args.output.resolve())
-    except (TypeError, ValueError, OSError, yaml.YAMLError, subprocess.CalledProcessError) as exc:
+    except (
+        TypeError,
+        ValueError,
+        OSError,
+        yaml.YAMLError,
+        subprocess.CalledProcessError,
+    ) as exc:
         parser.exit(1, f"Skill release validation failed: {exc}\n")
 
 

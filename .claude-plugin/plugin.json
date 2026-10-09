@@ -1,0 +1,12 @@
+{
+  "name": "math-skills",
+  "version": "0.2.0",
+  "description": "Agent skills for mathematical research, proofs, modeling, computation, and Lean 4 development.",
+  "author": {
+    "name": "Yehor Smoliakov"
+  },
+  "homepage": "https://github.com/Dividing0/math-skills#readme",
+  "repository": "https://github.com/Dividing0/math-skills",
+  "keywords": ["mathematics", "proofs", "modeling", "computation", "lean4"],
+  "skills": ["./"]
+}

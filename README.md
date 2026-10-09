@@ -20,6 +20,25 @@ Skill directories contain the resources they need:
 | `scripts/` | Executable helpers and examples, where available |
 | `assets/` | Sample files and other workflow resources, where available |
 
+### Claude Code
+
+Add this repository as a marketplace and install its plugin from Claude Code:
+
+```text
+/plugin marketplace add Dividing0/math-skills
+/plugin install math-skills@math-skills
+```
+
+Invoke a skill by its plugin-qualified name, for example:
+
+```text
+/math-skills:prove-with-lean4
+```
+
+For local development, run `claude --plugin-dir .` from the repository root. The [plugin manifest](.claude-plugin/plugin.json) discovers the existing skill directories; the [marketplace catalog](.claude-plugin/marketplace.json) provides the installation entry. Claude reads skill instructions from `SKILL.md`; `agents/openai.yaml` supplies metadata for OpenAI clients.
+
+See the [Claude Code plugin reference](https://code.claude.com/docs/en/plugins-reference) for the metadata format. Validate the manifest and catalog with `claude plugin validate .claude-plugin/plugin.json` and `claude plugin validate .claude-plugin/marketplace.json` when Claude Code is installed.
+
 ## Lean 4 workflows
 
 Start with [formalize-math-proofs](formalize-math-proofs/SKILL.md), or choose a focused workflow:
@@ -64,7 +83,7 @@ Pyright checks all repository Python files in standard mode. Scientific runtimes
 Run the helper regression suite in an isolated dependency environment:
 
 ```sh
-uv run --with sympy --with numpy --with scipy --with networkx --with statsmodels --with matplotlib python -m unittest discover -s tests -v
+uv run --with pyyaml --with sympy --with numpy --with scipy --with networkx --with statsmodels --with matplotlib python -m unittest discover -s tests -v
 ```
 
 The Lean integration test also runs when Elan and a Lean 4 toolchain are installed; otherwise it is skipped.
@@ -74,13 +93,13 @@ The Lean integration test also runs when Elan and a Lean 4 toolchain are install
 The [CI workflow](.github/workflows/ci.yml) runs on every push and pull request and supports manual runs. It checks:
 
 - Python lint, types, and syntax.
-- Skill metadata, links, and release packaging.
+- Skill metadata, Claude plugin/catalog consistency, links, and release packaging.
 - Helper regression tests.
 
 ## Releases
 
 Publishing a GitHub release, including a prerelease, runs the [release workflow](.github/workflows/release.yml) to validate skills and scripts and upload `math-skills.zip` as a release asset.
 
-The ZIP contains only tracked skill directories and their resources. Root-level tests and repository tooling, virtual environments, caches, and build artifacts are excluded.
+The ZIP contains tracked skill directories and their resources, plus `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` for Claude Code. Root-level tests and repository tooling, virtual environments, caches, and build artifacts are excluded. Keep the plugin version aligned with `pyproject.toml` when preparing a release; CI checks this consistency.
 
 Download packages from [Releases](https://github.com/Dividing0/math-skills/releases). See [CHANGELOG.md](CHANGELOG.md) for version history.

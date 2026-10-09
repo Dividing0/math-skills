@@ -27,3 +27,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) before selecting a domain method or declaring its decisive conclusion; it gives exact hypotheses, a worked derivation, a counterexample and handoff requirements.
+
+## Host computation
+
+When the `compute-with-sympy` skill is installed alongside this skill, use `simplify`, `factor`, `differentiate`, `integrate` or `solve` on specified expressions; retain denominator exclusions and branch assumptions. Use its [calculate.py](../compute-with-sympy/scripts/calculate.py) helper and [input/command reference](../compute-with-sympy/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

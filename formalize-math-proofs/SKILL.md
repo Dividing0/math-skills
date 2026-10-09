@@ -39,3 +39,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) before selecting a domain method or declaring its decisive conclusion; it gives exact hypotheses, a worked derivation, a counterexample and handoff requirements.
+
+## Host computation
+
+When the `audit-lean4-proofs` skill is installed alongside this skill, run actual Lean file checks or named theorem axiom diagnostics in a pinned project; inspect checker output and verify correspondence to the mathematical claim separately. Use its [check_project.py](../audit-lean4-proofs/scripts/check_project.py) helper and [input/command reference](../audit-lean4-proofs/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

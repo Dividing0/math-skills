@@ -27,3 +27,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) when choosing methods or checking decisive claims; it supplies specialization-specific hypotheses, a worked derivation, counterexamples and handoff conditions.
+
+## Host computation
+
+When the `compute-with-numpy` skill is installed alongside this skill, use `propagate-covariance` for a specified linear map and covariance; interpreting a Jacobian this way is a local approximation. Use its [analyze.py](../compute-with-numpy/scripts/analyze.py) helper and [input/command reference](../compute-with-numpy/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

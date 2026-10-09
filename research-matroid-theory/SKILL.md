@@ -23,3 +23,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) when choosing a theorem, deriving a result or auditing a conclusion in this skill; it supplies specialized branches, worked derivations and failure witnesses.
+
+## Runnable helper
+
+Use [check_matroid.py](scripts/check_matroid.py) to check every hereditary and exchange axiom in an explicitly listed finite independence system. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.

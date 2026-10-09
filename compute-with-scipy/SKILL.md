@@ -20,3 +20,7 @@ description: Solve numerical mathematical tasks using SciPy integration, ODE, sp
 ## Completion
 
 Preserve exact assumptions and distinguish planned code from an actual run. Do not invent solver outputs or dependency availability. Use the user’s language. Read the linked playbook for detailed gates and report which result checks actually ran.
+
+## Runnable helper
+
+Use [numerical.py](scripts/numerical.py) to solve finite linear programs, discrete transport and polynomial ODE initial-value problems. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.

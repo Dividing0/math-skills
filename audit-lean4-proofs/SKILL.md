@@ -17,3 +17,7 @@ description: "Audit Lean 4 mathematical proofs for correspondence to an informal
 ## Resources
 
 Read [audit playbook](references/audit-playbook.md) for dependency commands, trust boundaries and acceptance cases. [Clean.lean](assets/Clean.lean) is a complete core proof; [Admitted.lean](assets/Admitted.lean) intentionally compiles with `sorry`; [WrongStatement.lean](assets/WrongStatement.lean) intentionally proves a weaker claim. Keep demonstration failures out of production proof targets.
+
+## Runnable helper
+
+Use [check_project.py](scripts/check_project.py) to run pinned Lean file checks and named theorem axiom diagnostics with captured host output. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.

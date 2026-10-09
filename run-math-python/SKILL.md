@@ -22,3 +22,7 @@ description: Execute authorized mathematical Python scripts or Jupyter notebooks
 Use [notebook_example.py](scripts/notebook_example.py) for the explicit-interpreter notebook smoke example; retain kernel startup failures as failures, separately from script checks.
 
 Preserve exact assumptions and distinguish planned code from an actual run. Do not invent solver outputs or dependency availability. Use the user’s language. Read the linked playbook for detailed gates and report which result checks actually ran.
+
+## Runnable helper
+
+Use [host_capabilities.py](scripts/host_capabilities.py) to report host interpreters, executables and installed package metadata without installing dependencies. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.

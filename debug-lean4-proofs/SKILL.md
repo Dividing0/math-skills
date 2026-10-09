@@ -18,3 +18,7 @@ description: "Diagnose and repair Lean 4 mathematical proof failures involving e
 ## Resources
 
 Read [debugging playbook](references/debugging-playbook.md) for reproductions and acceptance checks. [MissingHypothesis.lean](assets/MissingHypothesis.lean) and [CoercionFailure.lean](assets/CoercionFailure.lean) are intentional failures; [Fixed.lean](assets/Fixed.lean) illustrates the corrections. Do not include failure assets in a normal build target.
+
+## Host computation
+
+When the `audit-lean4-proofs` skill is installed alongside this skill, run actual Lean file checks or named theorem axiom diagnostics in a pinned project; inspect checker output and verify correspondence to the mathematical claim separately. Use its [check_project.py](../audit-lean4-proofs/scripts/check_project.py) helper and [input/command reference](../audit-lean4-proofs/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

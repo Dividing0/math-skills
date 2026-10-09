@@ -23,3 +23,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) when selecting concrete methods, deriving a worked result or checking a boundary inference; it records domain-specific hypotheses and handoff obligations.
+
+## Host computation
+
+When the `nondimensionalize-models` skill is installed alongside this skill, compute rational dimensionless exponent vectors for supplied quantities and base units; physical assumptions and transformed initial/boundary data remain separate. Use its [dimensionless_groups.py](../nondimensionalize-models/scripts/dimensionless_groups.py) helper and [input/command reference](../nondimensionalize-models/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

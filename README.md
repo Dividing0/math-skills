@@ -6,10 +6,23 @@ Each skill has a `SKILL.md` with its purpose and workflow, plus supporting refer
 
 For Lean 4, start with [formalize-math-proofs](formalize-math-proofs/SKILL.md), which links to skills for project setup, proof construction, Mathlib search, debugging, and auditing.
 
+30 skills include configurable command-line helpers for host calculations. Each accepts JSON with `--input`, provides a sample request with `--example`, and returns results with evidence scope and dependency versions. See the [review of all 146 skills](docs/script-review.md) for available helpers and reuse routes. For example:
+
+```sh
+python research-number-theory/scripts/integer_tools.py --example > /tmp/crt.json
+python research-number-theory/scripts/integer_tools.py --input /tmp/crt.json
+```
+
 To check the Python scripts:
 
 ```sh
 uv run ruff check
+```
+
+Run the helper regression suite in an isolated dependency environment (Lean checks also run when Elan and a Lean 4 toolchain are installed):
+
+```sh
+uv run --with sympy --with numpy --with scipy --with networkx --with statsmodels --with matplotlib python -m unittest discover -s tests -v
 ```
 
 Publishing a GitHub release (including a prerelease) validates all skill metadata and Python scripts, then uploads `math-skills.zip` as a release asset. The ZIP contains only tracked skill directories and their resources; virtual environments, caches, build artifacts, and repository tooling are excluded.

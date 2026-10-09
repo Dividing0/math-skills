@@ -27,3 +27,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) when choosing a method, checking a proof or interpreting a boundary case in this skill; it gives exact prerequisites, a worked derivation, a counterexample and handoff obligations.
+
+## Host computation
+
+For finite classical propositional claims, use [truth_table.py](../research-mathematical-logic/scripts/truth_table.py) to obtain an exhaustive countermodel; see its [input reference](../research-mathematical-logic/references/command-line.md). For finite topological witnesses, use [finite_topology.py](../research-general-topology/scripts/finite_topology.py) to check open-set axioms, separation and closure; see its [input reference](../research-general-topology/references/command-line.md). These helpers require the owning skills alongside this skill. Adapt `--example` requests to the actual negation, check every original hypothesis, and retain the finite search scope; no counterexample found does not settle unrelated or infinite claims.

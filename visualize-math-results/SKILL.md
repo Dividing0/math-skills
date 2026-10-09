@@ -19,3 +19,7 @@ description: Create mathematically faithful plots with Matplotlib from actual an
 ## Completion
 
 Preserve exact assumptions and distinguish planned code from an actual run. Do not invent solver outputs or dependency availability. Use the user’s language. Read the linked playbook for detailed gates and report which result checks actually ran.
+
+## Runnable helper
+
+Use [plot_data.py](scripts/plot_data.py) to render supplied finite data to a labeled PNG, SVG or PDF using a headless backend. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.

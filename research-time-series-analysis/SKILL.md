@@ -26,3 +26,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) when choosing a domain-specific method, checking applicability hypotheses, or needing a worked derivation and a failure witness. Its explicit gates refine the family-level guide.
+
+## Host computation
+
+When the `analyze-data-with-statsmodels` skill is installed alongside this skill, fit an explicit OLS design with conventional or HC3 covariance and independent prediction rows; sampling assumptions and temporal/causal validity remain separate. Use its [fit_ols.py](../analyze-data-with-statsmodels/scripts/fit_ols.py) helper and [input/command reference](../analyze-data-with-statsmodels/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

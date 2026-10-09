@@ -27,3 +27,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) when choosing a method, checking a proof or interpreting a boundary case in this skill; it gives exact prerequisites, a worked derivation, a counterexample and handoff obligations.
+
+## Host computation
+
+When the `manage-math-research` skill is installed alongside this skill, check the declared claim dependency ledger for cycles and unresolved prerequisites; proof content and theorem application hypotheses still require mathematical review. Use its [dependencies.py](../manage-math-research/scripts/dependencies.py) helper and [input/command reference](../manage-math-research/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

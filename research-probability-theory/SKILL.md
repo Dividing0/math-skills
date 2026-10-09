@@ -27,3 +27,7 @@ For finite Markov chains, check stochasticity, support, irreducibility and perio
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) when selecting concrete methods, deriving a worked result or checking a boundary inference; it records domain-specific hypotheses and handoff obligations.
+
+## Runnable helper
+
+Use [finite_probability.py](scripts/finite_probability.py) to compute exact finite joint-law moments, dependence and information quantities. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.

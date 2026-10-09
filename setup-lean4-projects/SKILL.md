@@ -17,3 +17,7 @@ description: "Set up or repair Lean 4 mathematical projects using Elan, Lake, pi
 ## Resources
 
 Read [project playbook](references/project-playbook.md) for setup commands, failure cases and acceptance checks. Copy [Smoke.lean](assets/Smoke.lean) into a temporary project to test the checker without Mathlib. Do not install or upgrade a global toolchain unless the task calls for it.
+
+## Host computation
+
+When the `run-math-python` skill is installed alongside this skill, discover Lean/Lake executable paths without invoking or installing a toolchain; then follow this skill’s pinned project setup workflow. Use its [host_capabilities.py](../run-math-python/scripts/host_capabilities.py) helper and [input/command reference](../run-math-python/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

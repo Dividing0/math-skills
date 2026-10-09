@@ -18,3 +18,7 @@ description: Perform exact symbolic calculations with SymPy, preserving assumpti
 ## Resources
 
 Read [library-playbook](references/library-playbook.md) for the worked example, failure analysis, API sources and inter-skill contract. Run [example.py](scripts/example.py) with `--self-test` as the dependency smoke check; assertions run even without the flag. Report dependency failures rather than simulated results.
+
+## Runnable helper
+
+Use [calculate.py](scripts/calculate.py) to run exact symbolic algebra, calculus, matrix, dynamics and local metric calculations. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.

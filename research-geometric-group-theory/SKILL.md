@@ -23,3 +23,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) when choosing a theorem, deriving a result or auditing a conclusion in this skill; it supplies specialized branches, worked derivations and failure witnesses.
+
+## Host computation
+
+When the `research-abstract-algebra` skill is installed alongside this skill, check explicit finite group multiplication tables and element/conjugacy data; extending these results to group presentations or infinite groups requires separate justification. Use its [finite_group.py](../research-abstract-algebra/scripts/finite_group.py) helper and [input/command reference](../research-abstract-algebra/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

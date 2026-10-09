@@ -27,3 +27,9 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) when choosing a theorem, deriving a result or auditing a conclusion in this skill; it supplies specialized branches, worked derivations and failure witnesses.
+
+## Host computation
+
+When the `run-math-python` skill is installed alongside this skill, inventory installed packages and executable paths before selecting a host computation; use the existing execution runner to retain source, commands and actual logs. Use its [host_capabilities.py](../run-math-python/scripts/host_capabilities.py) helper and [input/command reference](../run-math-python/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.
+
+For an actual experiment script, use the adjacent [run_math.py](../run-math-python/scripts/run_math.py) runner with `--script /absolute/experiment.py --out /new/output/directory --timeout 60 -- --input /absolute/request.json`. It records the executed source, environment, stdout/stderr and exit status. Use an interpreter containing the script's required packages; the seed recorded by the runner does not automatically seed the experiment.

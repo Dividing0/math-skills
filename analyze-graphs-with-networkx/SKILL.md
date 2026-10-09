@@ -16,3 +16,7 @@ description: Implement and execute graph calculations using NetworkX. Use for fi
 Read [the library playbook](references/library-playbook.md) for the API map, worked example and integration contract. Run `python scripts/example.py --self-test` with the interpreter selected by `run-math-python`; preserve stdout, stderr, exit status and dependency versions. Missing dependencies must produce a failed run, never a fabricated result. Keep the demonstration separate from the user's implementation.
 
 Receive a mathematical statement, assumptions, input schema, target quantity, precision/tolerance and resource budget. Return runnable code, input provenance, versions, diagnostics, measured results, failed checks and limitations. Mark the result as exact on a specified finite object, numerical approximation, Monte Carlo estimate, or unexecuted; never label a computation a universal proof. Hand results to the named mathematical skill for interpretation and to `validate-math-implementation` for implementation checks.
+
+## Runnable helper
+
+Use [graph_report.py](scripts/graph_report.py) to inspect finite simple graph structure, shortest paths and maximum flows. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.

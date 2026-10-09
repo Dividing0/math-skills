@@ -25,3 +25,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) when choosing a method, checking a proof or interpreting a boundary case in this skill; it gives exact prerequisites, a worked derivation, a counterexample and handoff obligations.
+
+## Host computation
+
+When the `research-probability-theory` skill is installed alongside this skill, compute a specified finite joint law, including exact marginals/dependence and numerical base-2 entropies; no continuous or asymptotic conclusion follows. Use its [finite_probability.py](../research-probability-theory/scripts/finite_probability.py) helper and [input/command reference](../research-probability-theory/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

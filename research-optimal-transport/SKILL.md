@@ -26,3 +26,7 @@ Read [decision-guide.md](references/decision-guide.md) for method-selection chec
 Read [method-selection.md](references/method-selection.md) for candidate techniques, their selection conditions and failure alternatives. Use it together with this specialization’s exact workflow.
 
 Read [domain-playbook.md](references/domain-playbook.md) when selecting concrete methods, deriving a worked result or checking a boundary inference; it records domain-specific hypotheses and handoff obligations.
+
+## Host computation
+
+When the `compute-with-scipy` skill is installed alongside this skill, use `transport` for finite measures and an explicit cost matrix; inspect plan marginal residuals and distinguish discretization from continuous transport. Use its [numerical.py](../compute-with-scipy/scripts/numerical.py) helper and [input/command reference](../compute-with-scipy/references/command-line.md). `--example` prints a request to adapt; run the actual task with `--input /absolute/request.json` and retain the returned evidence scope and diagnostics.

@@ -17,3 +17,7 @@ description: "Find and reuse Lean 4 Mathlib definitions and theorems using local
 ## Resources
 
 Read [search playbook](references/search-playbook.md) for search patterns and boundary cases. [Reuse.lean](assets/Reuse.lean) demonstrates signature inspection and reuse with a focused import. Use `prove-with-lean4` once a new mathematical argument is needed; use `debug-lean4-proofs` when a discovered theorem fails to elaborate.
+
+## Runnable helper
+
+Use [search_local.py](scripts/search_local.py) to search local Lean source for a literal query and return bounded file/line matches. It accepts task-specific JSON through `--input` (or stdin) and prints results, evidence scope, versions and an input hash. `--example` prints a sample request. Read [the command reference](references/command-line.md) for inputs, commands and limitations; inspect the result fields before making mathematical claims.

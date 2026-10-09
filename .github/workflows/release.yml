@@ -1,0 +1,40 @@
+name: Release skills
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out release commit
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+
+      - name: Install validation tools
+        run: python -m pip install 'PyYAML==6.0.3' 'ruff==0.16.10'
+
+      - name: Check Python scripts
+        run: ruff check
+
+      - name: Validate and package skills
+        run: python scripts/release_skills.py --output "$RUNNER_TEMP/math-skills.zip"
+
+      - name: Upload release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$RELEASE_TAG" "$RUNNER_TEMP/math-skills.zip" --clobber

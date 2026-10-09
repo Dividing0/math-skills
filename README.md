@@ -11,3 +11,5 @@ To check the Python scripts:
 ```sh
 uv run ruff check
 ```
+
+Publishing a GitHub release (including a prerelease) validates all skill metadata and Python scripts, then uploads `math-skills.zip` as a release asset. The ZIP contains only tracked skill directories and their resources; virtual environments, caches, build artifacts, and repository tooling are excluded.

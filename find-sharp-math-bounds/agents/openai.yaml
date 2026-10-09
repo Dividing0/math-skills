@@ -1,0 +1,4 @@
+interface:
+  display_name: "Пошук точних математичних оцінок"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $find-sharp-math-bounds to analyze this task and report justified conclusions and unresolved obligations."

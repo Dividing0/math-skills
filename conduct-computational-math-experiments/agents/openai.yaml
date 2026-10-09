@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conduct Computational Math Experiments"
+  short_description: "Rigorous workflows for conduct computational math experiments"
+  default_prompt: "Use $conduct-computational-math-experiments to work through this mathematical task with explicit assumptions and verification."

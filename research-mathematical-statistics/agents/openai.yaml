@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Mathematical Statistics"
+  short_description: "Rigorous workflows for research mathematical statistics"
+  default_prompt: "Use $research-mathematical-statistics to work through this mathematical task with explicit assumptions and verification."

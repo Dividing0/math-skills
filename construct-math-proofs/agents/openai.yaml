@@ -1,0 +1,4 @@
+interface:
+  display_name: "Construct Math Proofs"
+  short_description: "Develop proofs with explicit logical obligations"
+  default_prompt: "Use $construct-math-proofs to  proving mathematical claims, selecting proof strategies, building lemmas and turning proof sketches into complete arguments."

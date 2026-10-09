@@ -1,0 +1,4 @@
+interface:
+  display_name: "Планування експериментів для моделей"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $design-math-experiments to analyze this task and report justified conclusions and unresolved obligations."

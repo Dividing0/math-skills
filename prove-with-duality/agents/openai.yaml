@@ -1,0 +1,4 @@
+interface:
+  display_name: "Доведення через двоїстість"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $prove-with-duality to analyze this task and report justified conclusions and unresolved obligations."

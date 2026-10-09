@@ -1,0 +1,4 @@
+interface:
+  display_name: "Симплектична геометрія"
+  short_description: "Rigorous research in symplectic geometry"
+  default_prompt: "Use $research-symplectic-geometry to analyze this mathematical problem with explicit assumptions and verification."

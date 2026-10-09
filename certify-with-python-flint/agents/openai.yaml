@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certify with python-flint"
+  short_description: "Exact algebra and validated ball computations"
+  default_prompt: "Use $certify-with-python-flint to compute this mathematical result, execute code and validate its scope."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Linear Algebra"
+  short_description: "Rigorous workflows for research linear algebra"
+  default_prompt: "Use $research-linear-algebra to work through this mathematical task with explicit assumptions and verification."

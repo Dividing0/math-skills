@@ -1,0 +1,4 @@
+interface:
+  display_name: "Теорія матроїдів"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $research-matroid-theory to analyze this task and report justified conclusions and unresolved obligations."

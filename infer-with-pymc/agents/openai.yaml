@@ -1,0 +1,4 @@
+interface:
+  display_name: "Infer with PyMC"
+  short_description: "Execute Bayesian inference with diagnostics"
+  default_prompt: "Use $infer-with-pymc to implement, execute and verify this mathematical calculation."

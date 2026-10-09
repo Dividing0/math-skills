@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate Mathematical Models"
+  short_description: "Rigorous workflows for validate mathematical models"
+  default_prompt: "Use $validate-mathematical-models to work through this mathematical task with explicit assumptions and verification."

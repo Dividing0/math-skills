@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Model Sensitivity"
+  short_description: "Rigorous workflows for analyze model sensitivity"
+  default_prompt: "Use $analyze-model-sensitivity to work through this mathematical task with explicit assumptions and verification."

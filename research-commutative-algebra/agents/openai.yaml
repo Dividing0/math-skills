@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Commutative Algebra"
+  short_description: "Rigorous workflows for research commutative algebra"
+  default_prompt: "Use $research-commutative-algebra to work through this mathematical task with explicit assumptions and verification."

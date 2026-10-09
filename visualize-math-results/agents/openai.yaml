@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visualize Math Results"
+  short_description: "Plot mathematical results with honest scales"
+  default_prompt: "Use $visualize-math-results to execute the requested mathematical task and report checked results with assumptions."

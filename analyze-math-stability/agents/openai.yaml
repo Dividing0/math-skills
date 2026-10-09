@@ -1,0 +1,4 @@
+interface:
+  display_name: "Аналіз математичної стійкості"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $analyze-math-stability to analyze this task and report justified conclusions and unresolved obligations."

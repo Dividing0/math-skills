@@ -1,0 +1,4 @@
+interface:
+  display_name: "Проєктування комп’ютерних доведень"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $design-computer-assisted-proofs to analyze this task and report justified conclusions and unresolved obligations."

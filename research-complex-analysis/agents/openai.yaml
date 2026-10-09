@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Complex Analysis"
+  short_description: "Rigorous workflows for research complex analysis"
+  default_prompt: "Use $research-complex-analysis to work through this mathematical task with explicit assumptions and verification."

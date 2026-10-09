@@ -1,0 +1,4 @@
+interface:
+  display_name: "Групи та алгебри Лі"
+  short_description: "Rigorous research in lie theory"
+  default_prompt: "Use $research-lie-theory to analyze this mathematical problem with explicit assumptions and verification."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ріманова геометрія"
+  short_description: "Rigorous research in riemannian geometry"
+  default_prompt: "Use $research-riemannian-geometry to analyze this mathematical problem with explicit assumptions and verification."

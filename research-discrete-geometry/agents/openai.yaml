@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Discrete Geometry"
+  short_description: "Rigorous workflows for research discrete geometry"
+  default_prompt: "Use $research-discrete-geometry to work through this mathematical task with explicit assumptions and verification."

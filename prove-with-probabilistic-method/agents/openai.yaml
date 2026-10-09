@@ -1,0 +1,4 @@
+interface:
+  display_name: "Доведення ймовірнісним методом"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $prove-with-probabilistic-method to analyze this task and report justified conclusions and unresolved obligations."

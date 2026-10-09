@@ -1,0 +1,4 @@
+interface:
+  display_name: "Survey Math Literature"
+  short_description: "Trace mathematical results and research gaps"
+  default_prompt: "Use $survey-math-literature to  mathematical literature reviews, tracing theorem dependencies, comparing prior results and assessing a proposed contribution against accessible sources."

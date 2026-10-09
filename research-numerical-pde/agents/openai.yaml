@@ -1,0 +1,4 @@
+interface:
+  display_name: "Чисельні методи для PDE"
+  short_description: "Rigorous research in numerical pde"
+  default_prompt: "Use $research-numerical-pde to analyze this mathematical problem with explicit assumptions and verification."

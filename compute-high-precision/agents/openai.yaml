@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compute with mpmath"
+  short_description: "High precision computations with error analysis"
+  default_prompt: "Use $compute-high-precision to compute this mathematical result, execute code and validate its scope."

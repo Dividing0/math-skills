@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Mathematical Manuscripts"
+  short_description: "Rigorous workflows for review mathematical manuscripts"
+  default_prompt: "Use $review-mathematical-manuscripts to work through this mathematical task with explicit assumptions and verification."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Functional Analysis"
+  short_description: "Rigorous workflows for research functional analysis"
+  default_prompt: "Use $research-functional-analysis to work through this mathematical task with explicit assumptions and verification."

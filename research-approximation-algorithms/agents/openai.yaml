@@ -1,0 +1,4 @@
+interface:
+  display_name: "Апроксимаційні алгоритми"
+  short_description: "Rigorous research in approximation algorithms"
+  default_prompt: "Use $research-approximation-algorithms to analyze this mathematical problem with explicit assumptions and verification."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Set Theory"
+  short_description: "Rigorous workflows for research set theory"
+  default_prompt: "Use $research-set-theory to work through this mathematical task with explicit assumptions and verification."

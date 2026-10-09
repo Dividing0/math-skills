@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Math Proofs"
+  short_description: "Audit mathematical proofs and hidden assumptions"
+  default_prompt: "Use $review-math-proofs to  checking submitted proofs, theorem applications, logical gaps, circularity and the distinction between a correct claim and a valid argument."

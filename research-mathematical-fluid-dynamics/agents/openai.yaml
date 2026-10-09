@@ -1,0 +1,4 @@
+interface:
+  display_name: "Математична гідродинаміка"
+  short_description: "Rigorous research in mathematical fluid dynamics"
+  default_prompt: "Use $research-mathematical-fluid-dynamics to analyze this mathematical problem with explicit assumptions and verification."

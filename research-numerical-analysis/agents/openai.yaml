@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Numerical Analysis"
+  short_description: "Rigorous workflows for research numerical analysis"
+  default_prompt: "Use $research-numerical-analysis to work through this mathematical task with explicit assumptions and verification."

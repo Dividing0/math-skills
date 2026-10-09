@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Model Identifiability"
+  short_description: "Rigorous workflows for analyze model identifiability"
+  default_prompt: "Use $analyze-model-identifiability to work through this mathematical task with explicit assumptions and verification."

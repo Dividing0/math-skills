@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Math Conjectures"
+  short_description: "Develop falsifiable conjectures from evidence"
+  default_prompt: "Use $generate-math-conjectures to develop mathematical conjectures from examples, structural arguments, computations or patterns while tracking evidence and possible counterexamples."

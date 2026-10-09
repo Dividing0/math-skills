@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Algebraic Topology"
+  short_description: "Rigorous workflows for research algebraic topology"
+  default_prompt: "Use $research-algebraic-topology to work through this mathematical task with explicit assumptions and verification."

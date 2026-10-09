@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Partial Differential Equations"
+  short_description: "Rigorous workflows for research partial differential equations"
+  default_prompt: "Use $research-partial-differential-equations to work through this mathematical task with explicit assumptions and verification."

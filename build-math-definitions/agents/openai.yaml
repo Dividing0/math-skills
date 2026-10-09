@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Math Definitions"
+  short_description: "Design precise definitions with boundary cases"
+  default_prompt: "Use $build-math-definitions to n introducing mathematical objects, revising definitions, checking well-definedness or distinguishing equivalent and nonequivalent formulations."

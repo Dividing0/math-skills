@@ -1,0 +1,4 @@
+interface:
+  display_name: "Formalize Math Proofs"
+  short_description: "Rigorous workflows for formalize math proofs"
+  default_prompt: "Use $formalize-math-proofs to work through this mathematical task with explicit assumptions and verification."

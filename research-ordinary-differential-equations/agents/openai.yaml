@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Ordinary Differential Equations"
+  short_description: "Rigorous workflows for research ordinary differential equations"
+  default_prompt: "Use $research-ordinary-differential-equations to work through this mathematical task with explicit assumptions and verification."

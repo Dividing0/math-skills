@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Systems with Python Control"
+  short_description: "Simulate control systems and verify conventions"
+  default_prompt: "Use $analyze-systems-with-python-control to execute this mathematical calculation and verify its results."

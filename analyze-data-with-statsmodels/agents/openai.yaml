@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Data with statsmodels"
+  short_description: "Fit statistical models with checked assumptions"
+  default_prompt: "Use $analyze-data-with-statsmodels to implement, execute and verify this mathematical calculation."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Formulate Math Problem"
+  short_description: "Formalize mathematical questions and assumptions"
+  default_prompt: "Use $formulate-math-problem to translate informal questions into precise mathematical problems, including domains, quantifiers, constraints, solution concepts and acceptance criteria."

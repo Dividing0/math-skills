@@ -1,0 +1,4 @@
+interface:
+  display_name: "Оптимальне керування"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $research-optimal-control to analyze this task and report justified conclusions and unresolved obligations."

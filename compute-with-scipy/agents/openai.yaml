@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compute with SciPy"
+  short_description: "Solve numerical problems with checked outputs"
+  default_prompt: "Use $compute-with-scipy to execute the requested mathematical task and report checked results with assumptions."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Вейвлет-аналіз"
+  short_description: "Rigorous research in wavelet analysis"
+  default_prompt: "Use $research-wavelet-analysis to analyze this mathematical problem with explicit assumptions and verification."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Порівняння математичних теорем"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $compare-math-theorems to analyze this task and report justified conclusions and unresolved obligations."

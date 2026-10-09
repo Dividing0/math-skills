@@ -1,0 +1,4 @@
+interface:
+  display_name: "Solve Inverse Problems"
+  short_description: "Rigorous workflows for solve inverse problems"
+  default_prompt: "Use $solve-inverse-problems to work through this mathematical task with explicit assumptions and verification."

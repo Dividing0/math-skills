@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Abstract Algebra"
+  short_description: "Rigorous workflows for research abstract algebra"
+  default_prompt: "Use $research-abstract-algebra to work through this mathematical task with explicit assumptions and verification."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Аналіз біфуркацій"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $analyze-bifurcations to analyze this task and report justified conclusions and unresolved obligations."

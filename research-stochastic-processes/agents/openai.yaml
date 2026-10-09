@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Stochastic Processes"
+  short_description: "Rigorous workflows for research stochastic processes"
+  default_prompt: "Use $research-stochastic-processes to work through this mathematical task with explicit assumptions and verification."

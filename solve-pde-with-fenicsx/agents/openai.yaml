@@ -1,0 +1,4 @@
+interface:
+  display_name: "Solve PDEs with FEniCSx"
+  short_description: "Solve weak PDE models and check mesh convergence"
+  default_prompt: "Use $solve-pde-with-fenicsx to execute this mathematical calculation and verify its results."

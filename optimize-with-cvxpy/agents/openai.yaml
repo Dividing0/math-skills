@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize with CVXPY"
+  short_description: "Solve convex models and inspect solver evidence"
+  default_prompt: "Use $optimize-with-cvxpy to execute this mathematical calculation and verify its results."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compute Topology with GUDHI"
+  short_description: "Compute filtered homology with checked models"
+  default_prompt: "Use $compute-topology-with-gudhi to implement, execute and verify this mathematical calculation."

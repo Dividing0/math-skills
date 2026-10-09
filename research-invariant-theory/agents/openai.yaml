@@ -1,0 +1,4 @@
+interface:
+  display_name: "Теорія інваріантів"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $research-invariant-theory to analyze this task and report justified conclusions and unresolved obligations."

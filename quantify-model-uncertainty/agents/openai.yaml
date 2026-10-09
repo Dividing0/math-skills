@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quantify Model Uncertainty"
+  short_description: "Rigorous workflows for quantify model uncertainty"
+  default_prompt: "Use $quantify-model-uncertainty to work through this mathematical task with explicit assumptions and verification."

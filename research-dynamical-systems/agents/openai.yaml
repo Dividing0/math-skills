@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Dynamical Systems"
+  short_description: "Rigorous workflows for research dynamical systems"
+  default_prompt: "Use $research-dynamical-systems to work through this mathematical task with explicit assumptions and verification."

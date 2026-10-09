@@ -1,0 +1,4 @@
+interface:
+  display_name: "Аналітична теорія чисел"
+  short_description: "Rigorous research in analytic number theory"
+  default_prompt: "Use $research-analytic-number-theory to analyze this mathematical problem with explicit assumptions and verification."

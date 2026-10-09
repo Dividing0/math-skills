@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compute with SageMath"
+  short_description: "Exact domain aware algebra with SageMath"
+  default_prompt: "Use $compute-with-sagemath to compute this mathematical result, execute code and validate its scope."

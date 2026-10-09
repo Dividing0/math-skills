@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certify Math Computations"
+  short_description: "Rigorous workflows for certify math computations"
+  default_prompt: "Use $certify-math-computations to work through this mathematical task with explicit assumptions and verification."

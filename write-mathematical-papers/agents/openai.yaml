@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Mathematical Papers"
+  short_description: "Rigorous workflows for write mathematical papers"
+  default_prompt: "Use $write-mathematical-papers to work through this mathematical task with explicit assumptions and verification."

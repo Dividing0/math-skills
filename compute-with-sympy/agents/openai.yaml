@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compute with SymPy"
+  short_description: "Exact symbolic mathematics with domain checks"
+  default_prompt: "Use $compute-with-sympy to compute this mathematical result, execute code and validate its scope."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Math Exercises"
+  short_description: "Rigorous workflows for design math exercises"
+  default_prompt: "Use $design-math-exercises to work through this mathematical task with explicit assumptions and verification."

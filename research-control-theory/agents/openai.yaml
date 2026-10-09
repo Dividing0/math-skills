@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Control Theory"
+  short_description: "Rigorous workflows for research control theory"
+  default_prompt: "Use $research-control-theory to work through this mathematical task with explicit assumptions and verification."

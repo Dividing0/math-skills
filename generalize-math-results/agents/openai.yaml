@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generalize Math Results"
+  short_description: "Extend results while tracking hypothesis changes"
+  default_prompt: "Use $generalize-math-results to weaken theorem assumptions, strengthen conclusions, extend object classes or identify sharp boundaries of a mathematical result."

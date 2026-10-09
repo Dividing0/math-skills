@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Math Research"
+  short_description: "Rigorous workflows for manage math research"
+  default_prompt: "Use $manage-math-research to work through this mathematical task with explicit assumptions and verification."

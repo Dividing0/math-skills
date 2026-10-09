@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Graphs with NetworkX"
+  short_description: "Execute and verify graph algorithms in Python"
+  default_prompt: "Use $analyze-graphs-with-networkx to implement, execute and verify this mathematical calculation."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Варіаційне числення"
+  short_description: "Rigorous research in calculus of variations"
+  default_prompt: "Use $research-calculus-of-variations to analyze this mathematical problem with explicit assumptions and verification."

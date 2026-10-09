@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Optimization Theory"
+  short_description: "Rigorous workflows for research optimization theory"
+  default_prompt: "Use $research-optimization-theory to work through this mathematical task with explicit assumptions and verification."

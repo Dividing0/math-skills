@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research General Topology"
+  short_description: "Rigorous workflows for research general topology"
+  default_prompt: "Use $research-general-topology to work through this mathematical task with explicit assumptions and verification."

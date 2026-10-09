@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Mathematical Logic"
+  short_description: "Rigorous workflows for research mathematical logic"
+  default_prompt: "Use $research-mathematical-logic to work through this mathematical task with explicit assumptions and verification."

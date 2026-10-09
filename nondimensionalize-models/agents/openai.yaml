@@ -1,0 +1,4 @@
+interface:
+  display_name: "Безрозмірне формулювання моделей"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $nondimensionalize-models to analyze this task and report justified conclusions and unresolved obligations."

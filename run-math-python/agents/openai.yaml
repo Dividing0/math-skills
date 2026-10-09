@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run Math Python"
+  short_description: "Execute and record mathematical Python runs"
+  default_prompt: "Use $run-math-python to execute the requested mathematical task and report checked results with assumptions."

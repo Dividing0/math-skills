@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Representation Theory"
+  short_description: "Rigorous workflows for research representation theory"
+  default_prompt: "Use $research-representation-theory to work through this mathematical task with explicit assumptions and verification."

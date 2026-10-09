@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compute with NumPy"
+  short_description: "Compute arrays and validate numerical results"
+  default_prompt: "Use $compute-with-numpy to execute the requested mathematical task and report checked results with assumptions."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Пошук математичних інваріантів"
+  short_description: "Explicit assumptions and rigorous verification"
+  default_prompt: "Use $discover-math-invariants to analyze this task and report justified conclusions and unresolved obligations."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Combinatorics"
+  short_description: "Rigorous workflows for research combinatorics"
+  default_prompt: "Use $research-combinatorics to work through this mathematical task with explicit assumptions and verification."

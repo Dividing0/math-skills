@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Real Analysis"
+  short_description: "Rigorous workflows for research real analysis"
+  default_prompt: "Use $research-real-analysis to work through this mathematical task with explicit assumptions and verification."

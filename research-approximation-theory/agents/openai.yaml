@@ -1,0 +1,4 @@
+interface:
+  display_name: "Теорія наближення"
+  short_description: "Rigorous research in approximation theory"
+  default_prompt: "Use $research-approximation-theory to analyze this mathematical problem with explicit assumptions and verification."

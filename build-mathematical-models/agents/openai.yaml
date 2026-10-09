@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Mathematical Models"
+  short_description: "Rigorous workflows for build mathematical models"
+  default_prompt: "Use $build-mathematical-models to work through this mathematical task with explicit assumptions and verification."

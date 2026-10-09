@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Harmonic Analysis"
+  short_description: "Rigorous workflows for research harmonic analysis"
+  default_prompt: "Use $research-harmonic-analysis to work through this mathematical task with explicit assumptions and verification."

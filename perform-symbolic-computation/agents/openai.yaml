@@ -1,0 +1,4 @@
+interface:
+  display_name: "Perform Symbolic Computation"
+  short_description: "Rigorous workflows for perform symbolic computation"
+  default_prompt: "Use $perform-symbolic-computation to work through this mathematical task with explicit assumptions and verification."

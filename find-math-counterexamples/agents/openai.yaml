@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find Math Counterexamples"
+  short_description: "Falsify claims and expose essential assumptions"
+  default_prompt: "Use $find-math-counterexamples to disprove mathematical statements, test necessity of hypotheses, challenge conjectures or construct examples that expose proof failures."

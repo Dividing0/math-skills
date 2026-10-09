@@ -1,0 +1,4 @@
+interface:
+  display_name: "Differentiate with JAX"
+  short_description: "Compute derivatives and validate JAX execution"
+  default_prompt: "Use $differentiate-with-jax to execute this mathematical calculation and verify its results."

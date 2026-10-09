@@ -1,4 +1,4 @@
 interface:
-  display_name: "Теорія розподілів"
+  display_name: "Distribution Theory"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $research-distribution-theory to analyze this task and report justified conclusions and unresolved obligations."

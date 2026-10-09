@@ -3,7 +3,7 @@ name: research-randomized-numerical-linear-algebra
 description: "Analyze randomized matrix sketches, range finders, low-rank approximation and sketched least squares with explicit access models, norms, distributions and probability guarantees."
 ---
 
-# Рандомізована чисельна лінійна алгебра
+# Randomized Numerical Linear Algebra
 
 ## Workflow
 

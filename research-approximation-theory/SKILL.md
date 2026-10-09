@@ -3,7 +3,7 @@ name: research-approximation-theory
 description: "Study approximation in uniform or function-space norms. Use for best-approximation existence and uniqueness, polynomial or rational approximation, interpolation error, node selection and regularity-dependent rates."
 ---
 
-# Теорія наближення
+# Approximation Theory
 
 ## Workflow
 

@@ -3,7 +3,7 @@ name: research-mathematical-complexity
 description: "Prove complexity upper bounds, verifier claims and reduction-based hardness for decision, search or counting problems; audit bit encoding, reduction direction and resource cost."
 ---
 
-# Теорія складності обчислень
+# Computational Complexity Theory
 
 ## Workflow
 

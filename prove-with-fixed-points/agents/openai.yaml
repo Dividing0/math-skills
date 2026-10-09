@@ -1,4 +1,4 @@
 interface:
-  display_name: "Доведення через нерухомі точки"
+  display_name: "Proofs Using Fixed Points"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $prove-with-fixed-points to analyze this task and report justified conclusions and unresolved obligations."

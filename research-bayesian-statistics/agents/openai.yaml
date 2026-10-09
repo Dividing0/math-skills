@@ -1,4 +1,4 @@
 interface:
-  display_name: "Баєсівська статистика"
+  display_name: "Bayesian Statistics"
   short_description: "Rigorous research in bayesian statistics"
   default_prompt: "Use $research-bayesian-statistics to analyze this mathematical problem with explicit assumptions and verification."

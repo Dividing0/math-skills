@@ -3,7 +3,7 @@ name: research-coding-theory
 description: "Analyze finite-field and nonlinear error-correcting codes. Use for generator matrices, minimum Hamming distance, rate bounds, unique or list decoding, erasures and exact code constructions."
 ---
 
-# Теорія кодування
+# Coding Theory
 
 ## Workflow
 

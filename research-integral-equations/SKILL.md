@@ -3,7 +3,7 @@ name: research-integral-equations
 description: "Analyze first-kind, second-kind and singular integral equations in named function spaces. Use when applying Neumann or Fredholm methods, checking compatibility or separating small residuals from stable inversion."
 ---
 
-# Інтегральні рівняння
+# Integral Equations
 
 ## Workflow
 

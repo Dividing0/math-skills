@@ -6,6 +6,8 @@
 - Document helper inputs, dependencies, examples, and evidence limitations; link reusable helpers from 72 additional skills.
 - Record the review of all 146 skills and retain existing workflows where additional scripts would not help.
 - Add 34 regression tests covering calculations, invalid inputs, and host execution.
+- Translate 70 Ukrainian skill headings and their display names into English.
+- Add `.gitignore` rules for macOS metadata, Python environments, caches, and build artifacts; remove tracked `.DS_Store` files.
 
 ## v0.1.0
 

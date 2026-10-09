@@ -3,7 +3,7 @@ name: research-optimal-control
 description: "Analyze optimal controls with explicit dynamics, costs and admissible function spaces. Use for feasibility, endpoint constraints, Pontryagin conditions, dynamic programming and necessary-versus-sufficient optimality."
 ---
 
-# Оптимальне керування
+# Optimal Control
 
 ## Workflow
 

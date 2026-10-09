@@ -3,7 +3,7 @@ name: research-knot-theory
 description: "Analyze knot diagrams, Reidemeister moves, Fox colorings and invariant-based obstructions. Use when comparing knots while tracking orientations, framing and the limits of matching invariants."
 ---
 
-# Теорія вузлів
+# Knot Theory
 
 ## Workflow
 

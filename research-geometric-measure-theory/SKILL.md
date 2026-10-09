@@ -3,7 +3,7 @@ name: research-geometric-measure-theory
 description: "Analyze Hausdorff measures, Lipschitz area and coarea formulas, rectifiability and finite-perimeter sets; distinguish multiplicity and reduced boundaries from topological boundaries."
 ---
 
-# Геометрична теорія міри
+# Geometric Measure Theory
 
 ## Workflow
 

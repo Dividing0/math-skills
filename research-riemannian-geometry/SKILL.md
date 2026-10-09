@@ -3,7 +3,7 @@ name: research-riemannian-geometry
 description: "Compute metric distances, connections and geodesics and assess completeness or curvature-based global results; separate local chart calculations from comparison hypotheses."
 ---
 
-# Ріманова геометрія
+# Riemannian Geometry
 
 ## Workflow
 

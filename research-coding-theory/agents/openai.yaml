@@ -1,4 +1,4 @@
 interface:
-  display_name: "Теорія кодування"
+  display_name: "Coding Theory"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $research-coding-theory to analyze this task and report justified conclusions and unresolved obligations."

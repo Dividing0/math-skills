@@ -3,7 +3,7 @@ name: research-mathematical-biology
 description: "Analyze population and compartmental models with explicit mechanisms, units and observations. Use when checking feasible regions, conservation, equilibria, biological parameter identifiability or model-based predictions."
 ---
 
-# Математична біологія
+# Mathematical Biology
 
 ## Workflow
 

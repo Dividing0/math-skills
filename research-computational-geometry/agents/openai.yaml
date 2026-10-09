@@ -1,4 +1,4 @@
 interface:
-  display_name: "Обчислювальна геометрія"
+  display_name: "Computational Geometry"
   short_description: "Rigorous research in computational geometry"
   default_prompt: "Use $research-computational-geometry to analyze this mathematical problem with explicit assumptions and verification."

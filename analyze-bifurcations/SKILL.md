@@ -3,7 +3,7 @@ name: analyze-bifurcations
 description: "Analyze parameter-dependent equilibria and periodic orbits; classify saddle-node, transcritical, pitchfork or Hopf candidates by nondegeneracy, crossing conditions and local stability."
 ---
 
-# Аналіз біфуркацій
+# Bifurcation Analysis
 
 ## Workflow
 

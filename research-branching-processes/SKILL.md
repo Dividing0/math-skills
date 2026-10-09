@@ -3,7 +3,7 @@ name: research-branching-processes
 description: "Analyze Galton–Watson offspring laws, generating functions, extinction fixed points and expected population growth; check independence, critical degeneracy and model extensions."
 ---
 
-# Процеси розгалуження
+# Branching Processes
 
 ## Workflow
 

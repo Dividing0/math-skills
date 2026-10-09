@@ -3,7 +3,7 @@ name: analyze-math-stability
 description: "Analyze Lyapunov, asymptotic, exponential or input stability of equilibria and dynamical systems; use for linearization, decay bounds, basin claims or perturbation robustness."
 ---
 
-# Аналіз математичної стійкості
+# Mathematical Stability Analysis
 
 ## Workflow
 

@@ -3,7 +3,7 @@ name: prove-with-fixed-points
 description: "Prove fixed-point statements using Banach, Brouwer or Schauder arguments. Use when checking completeness, invariance, contraction or compactness, separating existence from iteration convergence, or deriving stopping bounds."
 ---
 
-# Доведення через нерухомі точки
+# Proofs Using Fixed Points
 
 ## Workflow
 

@@ -3,7 +3,7 @@ name: research-large-deviations
 description: "Analyze exponentially rare events using large-deviation principles. Use for speed and topology selection, rate functions, Cramer or contraction hypotheses, exponential tightness and finite-sample scope audits."
 ---
 
-# Великі відхилення
+# Large Deviations
 
 ## Workflow
 

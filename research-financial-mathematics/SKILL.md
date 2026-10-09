@@ -3,7 +3,7 @@ name: research-financial-mathematics
 description: "Analyze abstract asset-pricing models, replication, martingale measures and market completeness. Use when deriving conditional derivative values, distinguishing risk-neutral and historical measures or auditing payoff spanning."
 ---
 
-# Фінансова математика
+# Financial Mathematics
 
 ## Workflow
 

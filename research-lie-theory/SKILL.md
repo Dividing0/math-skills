@@ -3,7 +3,7 @@ name: research-lie-theory
 description: "Analyze matrix Lie groups/algebras, brackets, exponentials and integration of morphisms. Use when deriving tangent spaces or distinguishing local Lie algebra data from global topology and representations."
 ---
 
-# Групи та алгебри Лі
+# Lie Groups and Algebras
 
 ## Workflow
 

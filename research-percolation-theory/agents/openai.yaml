@@ -1,4 +1,4 @@
 interface:
-  display_name: "Теорія перколяції"
+  display_name: "Percolation Theory"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $research-percolation-theory to analyze this task and report justified conclusions and unresolved obligations."

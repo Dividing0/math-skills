@@ -3,7 +3,7 @@ name: verify-proof-certificates
 description: "Verify exact algebraic, optimization or exhaustive proof certificates. Use when checking feasibility, input identity, coverage and checker assumptions while distinguishing invalid from unverifiable outcomes."
 ---
 
-# Перевірка сертифікатів доведень
+# Proof Certificate Verification
 
 ## Workflow
 

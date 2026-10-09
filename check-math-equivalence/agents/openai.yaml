@@ -1,4 +1,4 @@
 interface:
-  display_name: "Перевірка математичної еквівалентності"
+  display_name: "Mathematical Equivalence Checking"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $check-math-equivalence to analyze this task and report justified conclusions and unresolved obligations."

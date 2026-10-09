@@ -3,7 +3,7 @@ name: analyze-math-symmetries
 description: "Analyze group actions, invariance, equivariance, conserved quantities and orbit reductions. Use when checking a symmetry claim, deriving invariant coordinates, or auditing reconstruction and stabilizers."
 ---
 
-# Аналіз математичних симетрій
+# Mathematical Symmetry Analysis
 
 ## Workflow
 

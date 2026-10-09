@@ -1,4 +1,4 @@
 interface:
-  display_name: "Процеси розгалуження"
+  display_name: "Branching Processes"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $research-branching-processes to analyze this task and report justified conclusions and unresolved obligations."

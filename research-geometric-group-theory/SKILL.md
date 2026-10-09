@@ -3,7 +3,7 @@ name: research-geometric-group-theory
 description: "Analyze finitely generated groups through word metrics, Cayley graphs, growth and quasi-isometry. Use when comparing generating sets, deriving coarse bounds or distinguishing algebraic and geometric equivalence."
 ---
 
-# Геометрична теорія груп
+# Geometric Group Theory
 
 ## Workflow
 

@@ -3,7 +3,7 @@ name: research-random-matrix-theory
 description: "Analyze random matrix ensembles, trace moments and empirical spectra with explicit normalization. Use when checking Wigner hypotheses, dependence and moment conditions, or distinguishing bulk laws from edge and eigenvector claims."
 ---
 
-# Теорія випадкових матриць
+# Random Matrix Theory
 
 ## Workflow
 

@@ -3,7 +3,7 @@ name: research-approximation-algorithms
 description: "Analyze feasible solutions, relaxations and performance guarantees for approximation algorithms. Use when proving ratios against optimum, auditing rounding, or distinguishing expected from worst-case guarantees."
 ---
 
-# Апроксимаційні алгоритми
+# Approximation Algorithms
 
 ## Workflow
 

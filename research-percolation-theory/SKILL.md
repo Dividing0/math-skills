@@ -3,7 +3,7 @@ name: research-percolation-theory
 description: "Analyze site or bond connectivity probabilities and infinite-cluster events. Use when checking edge dependence, finite-size evidence, path bounds and graph-specific threshold claims."
 ---
 
-# Теорія перколяції
+# Percolation Theory
 
 ## Workflow
 

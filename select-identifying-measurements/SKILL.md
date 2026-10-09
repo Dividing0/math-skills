@@ -3,7 +3,7 @@ name: select-identifying-measurements
 description: "Choose sensors, sampling times or interventions that identify model parameters. Use to remove observation-map nullspaces, break global symmetries, compare noisy information and assess feasible measurement costs."
 ---
 
-# Вибір ідентифікувальних вимірювань
+# Selecting Identifying Measurements
 
 ## Workflow
 

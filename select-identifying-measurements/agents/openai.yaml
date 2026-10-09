@@ -1,4 +1,4 @@
 interface:
-  display_name: "Вибір ідентифікувальних вимірювань"
+  display_name: "Selecting Identifying Measurements"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $select-identifying-measurements to analyze this task and report justified conclusions and unresolved obligations."

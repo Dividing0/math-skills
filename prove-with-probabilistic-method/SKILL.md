@@ -3,7 +3,7 @@ name: prove-with-probabilistic-method
 description: "Prove combinatorial existence using random constructions, expectation, union bounds, alteration, dependency-aware probability arguments or conditional expectations."
 ---
 
-# Доведення ймовірнісним методом
+# Proofs Using the Probabilistic Method
 
 ## Workflow
 

@@ -3,7 +3,7 @@ name: research-combinatorial-designs
 description: "Construct and verify block designs using incidence counts, parameter constraints and exact pair coverage. Use when auditing design existence or checking finite block lists and repetitions."
 ---
 
-# Комбінаторні дизайни
+# Combinatorial Designs
 
 ## Workflow
 

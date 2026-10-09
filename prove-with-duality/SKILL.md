@@ -3,7 +3,7 @@ name: prove-with-duality
 description: "Construct proofs using primal-dual bounds, feasible witnesses, convex constraint qualifications and continuous-dual pairings. Use when certifying optimality or auditing duality gaps and attainment."
 ---
 
-# Доведення через двоїстість
+# Proofs Using Duality
 
 ## Workflow
 

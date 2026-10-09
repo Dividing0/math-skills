@@ -1,4 +1,4 @@
 interface:
-  display_name: "Простори Соболєва"
+  display_name: "Sobolev Spaces"
   short_description: "Rigorous research in sobolev spaces"
   default_prompt: "Use $research-sobolev-spaces to analyze this mathematical problem with explicit assumptions and verification."

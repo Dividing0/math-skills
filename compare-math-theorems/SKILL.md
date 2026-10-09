@@ -3,7 +3,7 @@ name: compare-math-theorems
 description: "Compare exact theorem hypotheses, domains, conclusions and bounds; prove implication directions, normalize conventions and construct witnesses of strictness or incomparability."
 ---
 
-# Порівняння математичних теорем
+# Comparing Mathematical Theorems
 
 ## Workflow
 

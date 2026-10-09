@@ -1,4 +1,4 @@
 interface:
-  display_name: "Теорія складності обчислень"
+  display_name: "Computational Complexity Theory"
   short_description: "Rigorous research in mathematical complexity"
   default_prompt: "Use $research-mathematical-complexity to analyze this mathematical problem with explicit assumptions and verification."

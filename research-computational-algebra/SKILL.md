@@ -3,7 +3,7 @@ name: research-computational-algebra
 description: "Analyze exact polynomial ideal membership, Groebner bases, elimination and parameter specialization. Use when selecting coefficient domains and monomial orders or verifying algebraic certificates."
 ---
 
-# Обчислювальна алгебра
+# Computational Algebra
 
 ## Workflow
 

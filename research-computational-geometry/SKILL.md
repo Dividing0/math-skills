@@ -3,7 +3,7 @@ name: research-computational-geometry
 description: "Develop geometric algorithms with robust predicates and explicit degeneracy policies. Use for orientation, convex hulls, segment intersections, arrangements, exact input models and computational complexity."
 ---
 
-# Обчислювальна геометрія
+# Computational Geometry
 
 ## Workflow
 

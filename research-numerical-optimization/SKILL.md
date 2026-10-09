@@ -3,7 +3,7 @@ name: research-numerical-optimization
 description: "Select and audit gradient, Newton, projected or proximal optimization methods. Use when deriving steps and rates, checking oracle accuracy, conditioning and constraints, or separating stagnation, stationarity and global optimality."
 ---
 
-# Чисельна оптимізація
+# Numerical Optimization
 
 ## Workflow
 

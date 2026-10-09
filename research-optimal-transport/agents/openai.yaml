@@ -1,4 +1,4 @@
 interface:
-  display_name: "Оптимальне транспортування"
+  display_name: "Optimal Transport"
   short_description: "Rigorous research in optimal transport"
   default_prompt: "Use $research-optimal-transport to analyze this mathematical problem with explicit assumptions and verification."

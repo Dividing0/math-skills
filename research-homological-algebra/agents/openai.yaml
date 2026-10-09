@@ -1,4 +1,4 @@
 interface:
-  display_name: "Гомологічна алгебра"
+  display_name: "Homological Algebra"
   short_description: "Rigorous research in homological algebra"
   default_prompt: "Use $research-homological-algebra to analyze this mathematical problem with explicit assumptions and verification."

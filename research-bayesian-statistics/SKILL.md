@@ -3,7 +3,7 @@ name: research-bayesian-statistics
 description: "Derive and assess Bayesian posteriors, predictive distributions and decision rules. Use when checking normalization, improper priors, conjugacy, Monte Carlo approximations or credible-region interpretations."
 ---
 
-# Баєсівська статистика
+# Bayesian Statistics
 
 ## Workflow
 

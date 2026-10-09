@@ -3,7 +3,7 @@ name: research-operator-theory
 description: "Analyze bounded or unbounded operators, adjoints, compactness and spectra on Banach or Hilbert spaces. Use when checking domains, invertibility, spectral components or self-adjointness."
 ---
 
-# Теорія операторів
+# Operator Theory
 
 ## Workflow
 

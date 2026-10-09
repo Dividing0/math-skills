@@ -3,7 +3,7 @@ name: research-optimal-transport
 description: "Analyze transport plans/maps, marginals, cost integrability and dual certificates. Use when proving discrete optimality or auditing Monge existence, moment assumptions and regularization bias."
 ---
 
-# Оптимальне транспортування
+# Optimal Transport
 
 ## Workflow
 

@@ -3,7 +3,7 @@ name: design-math-experiments
 description: "Design measurements or interventions for model discrimination and parameter estimation. Use when choosing design matrices, measurement times, noise-aware criteria or confirmatory experiments."
 ---
 
-# Планування експериментів для моделей
+# Experimental Design for Models
 
 ## Workflow
 

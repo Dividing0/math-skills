@@ -3,7 +3,7 @@ name: research-potential-theory
 description: "Analyze harmonic and subharmonic functions, Green kernels and elliptic boundary problems. Use for maximum principles, Dirichlet uniqueness, singularities, weak solution notions and behavior at infinity."
 ---
 
-# Потенціальна теорія
+# Potential Theory
 
 ## Workflow
 

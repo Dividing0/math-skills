@@ -1,4 +1,4 @@
 interface:
-  display_name: "Теорія операторів"
+  display_name: "Operator Theory"
   short_description: "Rigorous research in operator theory"
   default_prompt: "Use $research-operator-theory to analyze this mathematical problem with explicit assumptions and verification."

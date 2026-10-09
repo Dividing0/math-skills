@@ -3,7 +3,7 @@ name: research-causal-inference
 description: "Analyze intervention estimands, causal graphs, randomization, adjustment and instrumental-variable assumptions. Use when distinguishing identification from estimation and testing overlap, confounding or noncompliance."
 ---
 
-# Каузальний аналіз
+# Causal Inference
 
 ## Workflow
 

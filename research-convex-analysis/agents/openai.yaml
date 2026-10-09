@@ -1,4 +1,4 @@
 interface:
-  display_name: "Опуклий аналіз"
+  display_name: "Convex Analysis"
   short_description: "Rigorous research in convex analysis"
   default_prompt: "Use $research-convex-analysis to analyze this mathematical problem with explicit assumptions and verification."

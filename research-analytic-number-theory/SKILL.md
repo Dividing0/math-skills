@@ -3,7 +3,7 @@ name: research-analytic-number-theory
 description: "Analyze arithmetic sums, Dirichlet series, Euler products, contour arguments and asymptotic error terms; check convergence regions, uniformity and conditional zero-location assumptions."
 ---
 
-# Аналітична теорія чисел
+# Analytic Number Theory
 
 ## Workflow
 

@@ -3,7 +3,7 @@ name: research-homological-algebra
 description: "Compute chain homology, derived functors, resolutions and chain-map properties. Use when calculating Ext/Tor or auditing exactness, flatness, quasi-isomorphisms and grading conventions."
 ---
 
-# Гомологічна алгебра
+# Homological Algebra
 
 ## Workflow
 

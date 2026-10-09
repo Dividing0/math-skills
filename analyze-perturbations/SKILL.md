@@ -3,7 +3,7 @@ name: analyze-perturbations
 description: "Analyze small-parameter equations and asymptotic approximations; choose regular expansions, boundary layers or multiple scales with explicit remainder norms and time horizons."
 ---
 
-# Аналіз збурень
+# Perturbation Analysis
 
 ## Workflow
 

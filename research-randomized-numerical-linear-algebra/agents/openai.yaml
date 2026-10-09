@@ -1,4 +1,4 @@
 interface:
-  display_name: "Рандомізована чисельна лінійна алгебра"
+  display_name: "Randomized Numerical Linear Algebra"
   short_description: "Rigorous research in randomized numerical linear algebra"
   default_prompt: "Use $research-randomized-numerical-linear-algebra to analyze this mathematical problem with explicit assumptions and verification."

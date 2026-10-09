@@ -3,7 +3,7 @@ name: research-numerical-pde
 description: "Derive and audit PDE discretizations, stencils, CFL restrictions, conservation, stability, entropy selection and refinement studies with explicit error norms and solver assumptions."
 ---
 
-# Чисельні методи для PDE
+# Numerical Methods for PDEs
 
 ## Workflow
 

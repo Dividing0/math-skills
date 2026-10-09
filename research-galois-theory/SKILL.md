@@ -3,7 +3,7 @@ name: research-galois-theory
 description: "Analyze field extensions, automorphisms and splitting fields. Use for irreducibility, separability and normality checks, finite Galois correspondence or topology-sensitive infinite Galois extensions."
 ---
 
-# Теорія Галуа
+# Galois Theory
 
 ## Workflow
 

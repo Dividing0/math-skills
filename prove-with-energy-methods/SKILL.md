@@ -3,7 +3,7 @@ name: prove-with-energy-methods
 description: "Derive ODE or PDE energy estimates, decay and uniqueness bounds using justified integration by parts, boundary fluxes, coercivity and Gronwall inequalities."
 ---
 
-# Доведення енергетичними методами
+# Proofs Using Energy Methods
 
 ## Workflow
 

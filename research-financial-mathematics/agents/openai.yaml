@@ -1,4 +1,4 @@
 interface:
-  display_name: "Фінансова математика"
+  display_name: "Financial Mathematics"
   short_description: "Rigorous research in financial mathematics"
   default_prompt: "Use $research-financial-mathematics to analyze this mathematical problem with explicit assumptions and verification."

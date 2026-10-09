@@ -3,7 +3,7 @@ name: research-convex-analysis
 description: "Study convex functions, subgradients, normal cones and duality in stated topologies. Use when checking minimizer attainment, nonsmooth optimality, qualification conditions or finite versus infinite-dimensional arguments."
 ---
 
-# Опуклий аналіз
+# Convex Analysis
 
 ## Workflow
 

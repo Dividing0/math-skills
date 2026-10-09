@@ -3,7 +3,7 @@ name: research-noncommutative-algebra
 description: "Analyze associative algebras, multiplication order, one-sided ideals, quotients and modules. Use when auditing commutative identities transferred to matrices or applying algebraic structure theorems."
 ---
 
-# Некомутативна алгебра
+# Noncommutative Algebra
 
 ## Workflow
 

@@ -3,7 +3,7 @@ name: research-sobolev-spaces
 description: "Analyze weak derivatives, Sobolev membership, traces, continuous and compact embeddings with explicit domain regularity, dimension, exponent and representative conventions."
 ---
 
-# Простори Соболєва
+# Sobolev Spaces
 
 ## Workflow
 

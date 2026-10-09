@@ -3,7 +3,7 @@ name: research-matroid-theory
 description: "Analyze finite matroids through independence, rank, exchange, representations and minors. Use when verifying axioms, checking field dependence or justifying greedy optimization for bases or independent sets."
 ---
 
-# Теорія матроїдів
+# Matroid Theory
 
 ## Workflow
 

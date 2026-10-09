@@ -1,4 +1,4 @@
 interface:
-  display_name: "Комбінаторні дизайни"
+  display_name: "Combinatorial Designs"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $research-combinatorial-designs to analyze this task and report justified conclusions and unresolved obligations."

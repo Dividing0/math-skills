@@ -3,7 +3,7 @@ name: design-computer-assisted-proofs
 description: "Design rigorous enumeration, interval and algebraic-certificate proofs. Use when splitting analytic and computational obligations, proving coverage, selecting arithmetic, or minimizing the trusted checker."
 ---
 
-# Проєктування комп’ютерних доведень
+# Designing Computer-Assisted Proofs
 
 ## Workflow
 

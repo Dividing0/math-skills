@@ -1,4 +1,4 @@
 interface:
-  display_name: "Диференціальна топологія"
+  display_name: "Differential Topology"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $research-differential-topology to analyze this task and report justified conclusions and unresolved obligations."

@@ -1,4 +1,4 @@
 interface:
-  display_name: "Аналіз математичних симетрій"
+  display_name: "Mathematical Symmetry Analysis"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $analyze-math-symmetries to analyze this task and report justified conclusions and unresolved obligations."

@@ -3,7 +3,7 @@ name: research-wavelet-analysis
 description: "Analyze Haar and other wavelet transforms, frames, reconstruction and coefficient approximation. Use when verifying normalization, orthogonality, boundary conventions, vanishing moments or thresholding error."
 ---
 
-# Вейвлет-аналіз
+# Wavelet Analysis
 
 ## Workflow
 

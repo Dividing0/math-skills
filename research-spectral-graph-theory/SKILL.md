@@ -3,7 +3,7 @@ name: research-spectral-graph-theory
 description: "Analyze graph Laplacians, eigenvalues, connectivity and spectral relaxations. Use when checking weight signs, normalization, isolated vertices and rounding from spectral to discrete solutions."
 ---
 
-# Спектральна теорія графів
+# Spectral Graph Theory
 
 ## Workflow
 

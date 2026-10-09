@@ -1,4 +1,4 @@
 interface:
-  display_name: "Аналіз збурень"
+  display_name: "Perturbation Analysis"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $analyze-perturbations to analyze this task and report justified conclusions and unresolved obligations."

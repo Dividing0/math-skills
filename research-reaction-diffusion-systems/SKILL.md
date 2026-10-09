@@ -3,7 +3,7 @@ name: research-reaction-diffusion-systems
 description: "Analyze reaction-diffusion positivity, homogeneous equilibria and spatial-mode stability. Use when computing modal growth rates, assessing Turing instability or separating linear from nonlinear pattern claims."
 ---
 
-# Реакційно-дифузійні системи
+# Reaction-Diffusion Systems
 
 ## Workflow
 

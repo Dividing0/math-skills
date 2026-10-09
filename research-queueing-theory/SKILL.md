@@ -3,7 +3,7 @@ name: research-queueing-theory
 description: "Analyze queue occupancy, delay and stability using arrival and service laws, stationary balance and Little’s relation; verify M/M/1 or M/G/1 formula hypotheses."
 ---
 
-# Теорія масового обслуговування
+# Queueing Theory
 
 ## Workflow
 

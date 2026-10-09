@@ -1,4 +1,4 @@
 interface:
-  display_name: "Чисельна оптимізація"
+  display_name: "Numerical Optimization"
   short_description: "Rigorous research in numerical optimization"
   default_prompt: "Use $research-numerical-optimization to analyze this mathematical problem with explicit assumptions and verification."

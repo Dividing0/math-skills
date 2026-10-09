@@ -1,4 +1,4 @@
 interface:
-  display_name: "Метод скінченних елементів"
+  display_name: "Finite Element Method"
   short_description: "Rigorous research in finite element methods"
   default_prompt: "Use $research-finite-element-methods to analyze this mathematical problem with explicit assumptions and verification."

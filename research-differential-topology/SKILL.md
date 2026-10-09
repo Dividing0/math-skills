@@ -3,7 +3,7 @@ name: research-differential-topology
 description: "Analyze smooth level sets, regular values, transversality, orientations and degree. Use when checking submanifold arguments or separating local differential rank from global conclusions."
 ---
 
-# Диференціальна топологія
+# Differential Topology
 
 ## Workflow
 

@@ -3,7 +3,7 @@ name: check-math-equivalence
 description: "Check equivalence of equations, substitutions, optimization or differential formulations. Use when auditing transformations, lost solutions, domain restrictions, inverse maps or one-way implications."
 ---
 
-# Перевірка математичної еквівалентності
+# Mathematical Equivalence Checking
 
 ## Workflow
 

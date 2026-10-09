@@ -1,4 +1,4 @@
 interface:
-  display_name: "Оцінювання математичних агентів"
+  display_name: "Mathematical Agent Evaluation"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $evaluate-math-agents to analyze this task and report justified conclusions and unresolved obligations."

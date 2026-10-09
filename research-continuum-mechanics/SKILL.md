@@ -3,7 +3,7 @@ name: research-continuum-mechanics
 description: "Analyze deformation gradients, stress measures, mass balance and constitutive objectivity. Use when deriving continuum models, checking finite/small-strain assumptions or preparing mechanical PDEs."
 ---
 
-# Механіка суцільного середовища
+# Continuum Mechanics
 
 ## Workflow
 

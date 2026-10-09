@@ -1,4 +1,4 @@
 interface:
-  display_name: "Побудова наборів оцінювання"
+  display_name: "Building Evaluation Sets"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $build-math-evaluation-sets to analyze this task and report justified conclusions and unresolved obligations."

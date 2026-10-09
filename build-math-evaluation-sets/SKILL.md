@@ -3,7 +3,7 @@ name: build-math-evaluation-sets
 description: "Build mathematical agent evaluation datasets with verified solutions, false premises, incomplete-input tasks, private rubrics, leakage audits and capability-stratified splits."
 ---
 
-# Побудова наборів оцінювання
+# Building Evaluation Sets
 
 ## Workflow
 

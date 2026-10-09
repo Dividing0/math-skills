@@ -3,7 +3,7 @@ name: research-time-series-analysis
 description: "Analyze dependence, stationarity, AR models and forecast uncertainty; derive temporal moments, distinguish ergodicity and evaluate forecasts with leakage-free chronological validation."
 ---
 
-# Аналіз часових рядів
+# Time Series Analysis
 
 ## Workflow
 

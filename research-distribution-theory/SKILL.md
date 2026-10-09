@@ -3,7 +3,7 @@ name: research-distribution-theory
 description: "Work with test-function pairings, weak derivatives and permitted distribution operations. Use when deriving singular terms, checking products/convolutions or distinguishing weak from classical solutions."
 ---
 
-# Теорія розподілів
+# Distribution Theory
 
 ## Workflow
 

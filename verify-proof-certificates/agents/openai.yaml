@@ -1,4 +1,4 @@
 interface:
-  display_name: "Перевірка сертифікатів доведень"
+  display_name: "Proof Certificate Verification"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $verify-proof-certificates to analyze this task and report justified conclusions and unresolved obligations."

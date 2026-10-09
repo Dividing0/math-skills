@@ -1,4 +1,4 @@
 interface:
-  display_name: "Геометрична теорія груп"
+  display_name: "Geometric Group Theory"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $research-geometric-group-theory to analyze this task and report justified conclusions and unresolved obligations."

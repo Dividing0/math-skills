@@ -3,7 +3,7 @@ name: research-mathematical-fluid-dynamics
 description: "Analyze incompressible flow equations, energy estimates and weak or classical solution claims. Use when checking viscosity, boundary fluxes, norm control and existence or regularity hypotheses."
 ---
 
-# Математична гідродинаміка
+# Mathematical Fluid Dynamics
 
 ## Workflow
 

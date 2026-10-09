@@ -3,7 +3,7 @@ name: research-nonlinear-analysis
 description: "Analyze nonlinear equations and maps in metric, Banach or finite-dimensional spaces. Use for contraction and compact fixed-point methods, local inversion, monotonicity, existence and independent uniqueness proofs."
 ---
 
-# Нелінійний аналіз
+# Nonlinear Analysis
 
 ## Workflow
 

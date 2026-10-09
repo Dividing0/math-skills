@@ -3,7 +3,7 @@ name: research-calculus-of-variations
 description: "Analyze integral functionals, admissible curves and variational minimizers. Use when deriving first variations and boundary conditions, applying the direct method, testing second variations or separating stationarity from minimality."
 ---
 
-# Варіаційне числення
+# Calculus of Variations
 
 ## Workflow
 

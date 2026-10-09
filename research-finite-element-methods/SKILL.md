@@ -3,7 +3,7 @@ name: research-finite-element-methods
 description: "Derive and audit finite element weak forms, Galerkin spaces, coercivity, mixed inf-sup stability, assembly and approximation errors under explicit mesh and regularity assumptions."
 ---
 
-# Метод скінченних елементів
+# Finite Element Method
 
 ## Workflow
 

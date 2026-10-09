@@ -1,4 +1,4 @@
 interface:
-  display_name: "Спектральна теорія графів"
+  display_name: "Spectral Graph Theory"
   short_description: "Rigorous research in spectral graph theory"
   default_prompt: "Use $research-spectral-graph-theory to analyze this mathematical problem with explicit assumptions and verification."

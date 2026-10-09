@@ -3,7 +3,7 @@ name: research-mathematical-physics
 description: "Analyze Hilbert-space operators, spectral problems, domains and physical limiting models. Use when checking self-adjointness, boundary conditions, formal expansions or conservation-law arguments."
 ---
 
-# Математична фізика
+# Mathematical Physics
 
 ## Workflow
 

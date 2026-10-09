@@ -3,7 +3,7 @@ name: discover-math-invariants
 description: "Find and verify conserved quantities under ODE flows, discrete maps, group actions or PDE balances; distinguish invariance, monotonicity and complete classification."
 ---
 
-# Пошук математичних інваріантів
+# Finding Mathematical Invariants
 
 ## Workflow
 

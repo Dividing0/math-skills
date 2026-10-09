@@ -3,7 +3,7 @@ name: research-symplectic-geometry
 description: "Analyze symplectic forms, Hamiltonian vector fields and local/global canonical structures. Use when checking closedness, nondegeneracy, exactness, Darboux scope or completeness of Hamiltonian flows."
 ---
 
-# Симплектична геометрія
+# Symplectic Geometry
 
 ## Workflow
 

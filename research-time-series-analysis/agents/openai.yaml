@@ -1,4 +1,4 @@
 interface:
-  display_name: "Аналіз часових рядів"
+  display_name: "Time Series Analysis"
   short_description: "Rigorous research in time series analysis"
   default_prompt: "Use $research-time-series-analysis to analyze this mathematical problem with explicit assumptions and verification."

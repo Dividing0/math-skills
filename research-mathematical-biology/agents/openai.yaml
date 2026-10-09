@@ -1,4 +1,4 @@
 interface:
-  display_name: "Математична біологія"
+  display_name: "Mathematical Biology"
   short_description: "Rigorous research in mathematical biology"
   default_prompt: "Use $research-mathematical-biology to analyze this mathematical problem with explicit assumptions and verification."

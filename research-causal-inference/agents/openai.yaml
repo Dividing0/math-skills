@@ -1,4 +1,4 @@
 interface:
-  display_name: "Каузальний аналіз"
+  display_name: "Causal Inference"
   short_description: "Rigorous research in causal inference"
   default_prompt: "Use $research-causal-inference to analyze this mathematical problem with explicit assumptions and verification."

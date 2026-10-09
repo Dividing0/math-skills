@@ -1,4 +1,4 @@
 interface:
-  display_name: "Алгебраїчна теорія чисел"
+  display_name: "Algebraic Number Theory"
   short_description: "Rigorous research in algebraic number theory"
   default_prompt: "Use $research-algebraic-number-theory to analyze this mathematical problem with explicit assumptions and verification."

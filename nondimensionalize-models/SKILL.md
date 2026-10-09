@@ -3,7 +3,7 @@ name: nondimensionalize-models
 description: "Transform differential equations, parameters and initial or boundary data into dimensionless form. Use when selecting physical scales, finding dimensionless groups, or testing term omission and initial layers."
 ---
 
-# Безрозмірне формулювання моделей
+# Model Nondimensionalization
 
 ## Workflow
 

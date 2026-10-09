@@ -3,7 +3,7 @@ name: evaluate-math-agents
 description: "Evaluate mathematics agents with hidden task rubrics, matched budgets and task-level evidence. Use when auditing correctness, comparing skill conditions, testing regressions or assessing claims of performance improvement."
 ---
 
-# Оцінювання математичних агентів
+# Mathematical Agent Evaluation
 
 ## Workflow
 

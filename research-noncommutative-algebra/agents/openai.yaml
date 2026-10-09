@@ -1,4 +1,4 @@
 interface:
-  display_name: "Некомутативна алгебра"
+  display_name: "Noncommutative Algebra"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $research-noncommutative-algebra to analyze this task and report justified conclusions and unresolved obligations."

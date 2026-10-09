@@ -3,7 +3,7 @@ name: research-invariant-theory
 description: "Compute and audit polynomial invariants of group actions, invariant-ring generation, relations and orbit separation with explicit fields, characteristic and quotient hypotheses."
 ---
 
-# Теорія інваріантів
+# Invariant Theory
 
 ## Workflow
 

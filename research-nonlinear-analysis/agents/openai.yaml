@@ -1,4 +1,4 @@
 interface:
-  display_name: "Нелінійний аналіз"
+  display_name: "Nonlinear Analysis"
   short_description: "Explicit assumptions and rigorous verification"
   default_prompt: "Use $research-nonlinear-analysis to analyze this task and report justified conclusions and unresolved obligations."

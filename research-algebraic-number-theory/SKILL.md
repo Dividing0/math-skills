@@ -3,7 +3,7 @@ name: research-algebraic-number-theory
 description: "Analyze number fields, rings of integers, discriminants, prime-ideal splitting and class-group obstructions; distinguish orders, ideals and element factorization with exact arithmetic."
 ---
 
-# Алгебраїчна теорія чисел
+# Algebraic Number Theory
 
 ## Workflow
 

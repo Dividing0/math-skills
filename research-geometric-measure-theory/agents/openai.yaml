@@ -1,4 +1,4 @@
 interface:
-  display_name: "Геометрична теорія міри"
+  display_name: "Geometric Measure Theory"
   short_description: "Rigorous research in geometric measure theory"
   default_prompt: "Use $research-geometric-measure-theory to analyze this mathematical problem with explicit assumptions and verification."

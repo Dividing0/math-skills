@@ -3,7 +3,7 @@ name: find-sharp-math-bounds
 description: "Prove optimal constants with equality witnesses or limiting sequences. Use when deriving universal inequalities and separating sharpness, attainment and asymptotic optimality."
 ---
 
-# Пошук точних математичних оцінок
+# Finding Sharp Mathematical Bounds
 
 ## Workflow
 

@@ -1,21 +1,56 @@
 # Math Skills
 
-A collection of agent skills for mathematical research, proofs, modeling, computation, and Lean 4 formalization.
+[![CI](https://github.com/Dividing0/math-skills/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Dividing0/math-skills/actions/workflows/ci.yml)
 
-Each skill has a `SKILL.md` with its purpose and workflow, plus supporting references or examples where useful. Choose a skill directory and read its `SKILL.md` to get started.
+A collection of **149 agent skills** for mathematical research, proofs, modeling, computation, and Lean 4 formalization. **30 skills** include configurable command-line helpers for host calculations.
 
-For Lean 4, start with [formalize-math-proofs](formalize-math-proofs/SKILL.md), which links to skills for project setup, proof construction, Mathlib search, debugging, and auditing.
+## Getting started
 
-For existing Lean 4 code, use [improve-lean4-code](improve-lean4-code/SKILL.md) to enhance implementations, [analyze-lean4-code](analyze-lean4-code/SKILL.md) to investigate weaknesses, and [check-lean4-idiomaticity](check-lean4-idiomaticity/SKILL.md) to review style and library conventions.
+1. Choose a skill directory for your task and read its `SKILL.md`.
+2. Follow its workflow and linked references.
+3. For executable helpers, read the command reference and install the dependencies required by that skill.
 
-30 skills include configurable command-line helpers for host calculations. Each accepts JSON with `--input`, provides a sample request with `--example`, and returns results with evidence scope and dependency versions. The collection contains 149 skills; individual workflows link to relevant helpers and their command references. For example:
+Skill directories contain the resources they need:
+
+| Resource | Purpose |
+|---|---|
+| `SKILL.md` | Skill description and workflow |
+| `agents/openai.yaml` | Agent interface metadata |
+| `references/` | Supporting guidance and command documentation |
+| `scripts/` | Executable helpers and examples, where available |
+| `assets/` | Sample files and other workflow resources, where available |
+
+## Lean 4 workflows
+
+Start with [formalize-math-proofs](formalize-math-proofs/SKILL.md), or choose a focused workflow:
+
+| Task | Skill |
+|---|---|
+| Set up toolchains, Lake, and dependencies | [setup-lean4-projects](setup-lean4-projects/SKILL.md) |
+| Construct and check proofs | [prove-with-lean4](prove-with-lean4/SKILL.md) |
+| Find library definitions and theorems | [search-mathlib](search-mathlib/SKILL.md) |
+| Diagnose proof failures | [debug-lean4-proofs](debug-lean4-proofs/SKILL.md) |
+| Audit statements and proof dependencies | [audit-lean4-proofs](audit-lean4-proofs/SKILL.md) |
+| Refactor and enhance existing code | [improve-lean4-code](improve-lean4-code/SKILL.md) |
+| Investigate code weaknesses | [analyze-lean4-code](analyze-lean4-code/SKILL.md) |
+| Review style and library conventions | [check-lean4-idiomaticity](check-lean4-idiomaticity/SKILL.md) |
+
+## Command-line helpers
+
+Configurable helpers accept JSON with `--input`, provide a sample request with `--example`, and return results with evidence scope and dependency versions. Individual workflows link to relevant helpers and their command references.
+
+For example, generate and run a Chinese remainder theorem request:
 
 ```sh
 python research-number-theory/scripts/integer_tools.py --example > /tmp/crt.json
 python research-number-theory/scripts/integer_tools.py --input /tmp/crt.json
 ```
 
-To check the Python scripts:
+## Development
+
+Use Python **3.14 or newer** and `uv` for repository checks. Scientific runtimes are installed separately as needed by each skill.
+
+### Lint and type checks
 
 ```sh
 uv run ruff check
@@ -24,12 +59,28 @@ uv run pyright --warnings
 
 Pyright checks all repository Python files in standard mode. Scientific runtimes are installed per skill, so missing optional imports are not reported; library types come from available stubs and typed packages rather than inference from untyped library source. Runtime checks still require the relevant dependencies.
 
-Run the helper regression suite in an isolated dependency environment (Lean checks also run when Elan and a Lean 4 toolchain are installed):
+### Regression tests
+
+Run the helper regression suite in an isolated dependency environment:
 
 ```sh
 uv run --with sympy --with numpy --with scipy --with networkx --with statsmodels --with matplotlib python -m unittest discover -s tests -v
 ```
 
-Every push and pull request runs CI to lint, type-check, and syntax-check Python files, validate skill metadata and links, check release packaging, and run the helper regression suite. The Lean integration test is skipped when no Lean toolchain is installed on the runner.
+The Lean integration test also runs when Elan and a Lean 4 toolchain are installed; otherwise it is skipped.
 
-Publishing a GitHub release (including a prerelease) validates all skill metadata and Python scripts, then uploads `math-skills.zip` as a release asset. The ZIP contains only tracked skill directories and their resources; virtual environments, caches, build artifacts, and repository tooling are excluded.
+### Continuous integration
+
+The [CI workflow](.github/workflows/ci.yml) runs on every push and pull request and supports manual runs. It checks:
+
+- Python lint, types, and syntax.
+- Skill metadata, links, and release packaging.
+- Helper regression tests.
+
+## Releases
+
+Publishing a GitHub release, including a prerelease, runs the [release workflow](.github/workflows/release.yml) to validate skills and scripts and upload `math-skills.zip` as a release asset.
+
+The ZIP contains only tracked skill directories and their resources. Root-level tests and repository tooling, virtual environments, caches, and build artifacts are excluded.
+
+Download packages from [Releases](https://github.com/Dividing0/math-skills/releases). See [CHANGELOG.md](CHANGELOG.md) for version history.

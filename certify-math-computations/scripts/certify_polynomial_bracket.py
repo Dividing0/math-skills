@@ -2,8 +2,9 @@
 Coefficients are constant-first. No floating point or numerical root assumptions.
 """
 
+import argparse
+import json
 from fractions import Fraction as Q
-import argparse, json
 
 
 def value(coefficients, x):

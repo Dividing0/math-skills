@@ -3,7 +3,9 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, json, sys
+import argparse
+import json
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -13,7 +15,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 try:
-    from sage.all import PolynomialRing, QQ, GF
+    from sage.all import GF, QQ, PolynomialRing
     from sage.env import SAGE_VERSION
 
     def compute():

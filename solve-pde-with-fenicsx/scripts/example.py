@@ -6,20 +6,23 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, json, sys
+import argparse
+import json
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--self-test", action="store_true")
 args = parser.parse_args()
 try:
     import inspect
-    import numpy as np
+
     import dolfinx
+    import numpy as np
+    import ufl
     from dolfinx import fem, mesh
     from dolfinx.fem.petsc import LinearProblem
     from mpi4py import MPI
     from petsc4py import PETSc
-    import ufl
 
     comm = MPI.COMM_WORLD
     if comm.size != 1:
@@ -74,7 +77,8 @@ try:
     expected = [(1 / n) ** 2 / np.sqrt(30) for n in [8, 16]]
     np.testing.assert_allclose(errors, expected, rtol=1e-6, atol=1e-12)
     assert 3.9 < ratio < 4.1
-    import basix, mpi4py
+    import basix
+    import mpi4py
 
     result = {
         "dolfinx": dolfinx.__version__,

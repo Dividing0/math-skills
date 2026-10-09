@@ -6,15 +6,18 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, json, sys, platform
+import argparse
+import json
+import platform
+import sys
 
 p = argparse.ArgumentParser()
 p.add_argument("--self-test", action="store_true")
 args = p.parse_args()
 try:
     import numpy as np
-    import statsmodels.api as sm
     import statsmodels
+    import statsmodels.api as sm
     from statsmodels.tools.sm_exceptions import MissingDataError
 except ImportError as exc:
     print(

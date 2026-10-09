@@ -6,14 +6,16 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, json, sys
+import argparse
+import json
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--self-test", action="store_true")
 args = parser.parse_args()
 try:
-    import numpy as np
     import cvxpy as cp
+    import numpy as np
 
     b = np.array([2.0, -1.0])
     x = cp.Variable(2)

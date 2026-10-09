@@ -7,7 +7,16 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, hashlib, json, os, platform, signal, subprocess, sys, tempfile, time
+import argparse
+import hashlib
+import json
+import os
+import platform
+import signal
+import subprocess
+import sys
+import tempfile
+import time
 from pathlib import Path
 
 

@@ -5,12 +5,15 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, json, math, sys
+import argparse
+import json
+import math
+import sys
 
 try:
     import numpy as np
     import scipy
-    from scipy.integrate import solve_ivp, quad
+    from scipy.integrate import quad, solve_ivp
     from scipy.optimize import brentq
     from scipy.sparse import csr_matrix
     from scipy.sparse.linalg import cg

@@ -5,14 +5,18 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, json, os, sys, tempfile
+import argparse
+import json
+import os
+import sys
+import tempfile
 from pathlib import Path
 
 try:
     import nbformat
-    from nbclient import NotebookClient
     from jupyter_client import KernelManager
     from jupyter_client.kernelspec import KernelSpecManager
+    from nbclient import NotebookClient
 except ImportError:
     sys.exit("dependency_unavailable: nbformat/nbclient/jupyter-client/ipykernel")
 

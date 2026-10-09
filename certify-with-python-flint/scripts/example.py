@@ -3,7 +3,9 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, json, sys
+import argparse
+import json
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -13,9 +15,10 @@ parser.add_argument(
 )
 args = parser.parse_args()
 try:
-    import flint
-    from flint import arb, fmpq, fmpz_poly, ctx
     from fractions import Fraction
+
+    import flint
+    from flint import arb, ctx, fmpq, fmpz_poly
 
     def compute():
         old = ctx.prec

@@ -6,15 +6,18 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, json, sys
+import argparse
+import json
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--self-test", action="store_true")
 args = parser.parse_args()
 try:
     import time
-    import numpy as np
+
     import jax
+    import numpy as np
 
     jax.config.update("jax_enable_x64", True)
     import jax.numpy as jnp

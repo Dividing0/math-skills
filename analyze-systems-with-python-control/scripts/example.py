@@ -6,14 +6,16 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, json, sys
+import argparse
+import json
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--self-test", action="store_true")
 args = parser.parse_args()
 try:
-    import numpy as np
     import control as ct
+    import numpy as np
 
     G = ct.tf([1.0], [1.0, 1.0], dt=0)
     T = ct.feedback(G, 1, sign=-1)

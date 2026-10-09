@@ -5,7 +5,11 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, json, math, sys, tempfile
+import argparse
+import json
+import math
+import sys
+import tempfile
 from pathlib import Path
 
 try:

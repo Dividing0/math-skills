@@ -6,15 +6,19 @@ if not __debug__:
         "Verification requires Python assertions enabled; do not use -O or PYTHONOPTIMIZE."
     )
 
-import argparse, json, sys, platform, math
+import argparse
+import json
+import math
+import platform
+import sys
 
 p = argparse.ArgumentParser()
 p.add_argument("--self-test", action="store_true")
 args = p.parse_args()
 try:
+    import arviz as az
     import numpy as np
     import pymc as pm
-    import arviz as az
     import pytensor
 except ImportError as exc:
     print(

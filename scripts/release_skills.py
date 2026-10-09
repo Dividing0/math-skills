@@ -163,7 +163,10 @@ def package(root, output):
     }
     if not CLAUDE_METADATA <= {PurePosixPath(name) for name in tracked if name}:
         raise ValueError("Claude plugin and marketplace metadata must be tracked")
+    if "LICENSE" not in tracked:
+        raise ValueError("LICENSE must be tracked for inclusion in release archives")
     files.update(CLAUDE_METADATA)
+    files.add(PurePosixPath("LICENSE"))
     for path in files:
         if (root / path).is_symlink() or not (root / path).is_file():
             raise ValueError(f"{path}: expected a regular tracked file")

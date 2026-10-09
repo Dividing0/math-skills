@@ -1,6 +1,7 @@
 {
   "name": "math-skills",
   "version": "0.2.0",
+  "license": "MIT",
   "description": "Agent skills for mathematical research, proofs, modeling, computation, and Lean 4 development.",
   "author": {
     "name": "Yehor Smoliakov"

@@ -100,6 +100,10 @@ The [CI workflow](.github/workflows/ci.yml) runs on every push and pull request 
 
 Publishing a GitHub release, including a prerelease, runs the [release workflow](.github/workflows/release.yml) to validate skills and scripts and upload `math-skills.zip` as a release asset.
 
-The ZIP contains tracked skill directories and their resources, plus `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` for Claude Code. Root-level tests and repository tooling, virtual environments, caches, and build artifacts are excluded. Keep the plugin version aligned with `pyproject.toml` when preparing a release; CI checks this consistency.
+The ZIP contains tracked skill directories and their resources, the `LICENSE` file, and `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` for Claude Code. Root-level tests and repository tooling, virtual environments, caches, and build artifacts are excluded. Keep the plugin version aligned with `pyproject.toml` when preparing a release; CI checks this consistency.
 
 Download packages from [Releases](https://github.com/Dividing0/math-skills/releases). See [CHANGELOG.md](CHANGELOG.md) for version history.
+
+## License
+
+[MIT License](LICENSE) — Copyright (c) 2026 Yehor Smoliakov.

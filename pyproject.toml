@@ -3,6 +3,8 @@ name = "math-skills"
 version = "0.2.0"
 description = "Mathematical skills to work with ChatGPT"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     { name = "Yehor Smoliakov", email = "yehors@ukr.net" }
 ]

@@ -29,6 +29,7 @@ class ReleaseMetadata(unittest.TestCase):
         }
         self.write(".claude-plugin/plugin.json", json.dumps(self.plugin))
         self.write(".claude-plugin/marketplace.json", json.dumps(self.marketplace))
+        self.write("LICENSE", "Test license notice.\n")
         self.write(
             "pyproject.toml", '[project]\nname = "math-skills"\nversion = "0.2.0"\n'
         )
@@ -75,6 +76,7 @@ class ReleaseMetadata(unittest.TestCase):
             self.assertEqual(
                 set(archive.namelist()),
                 {
+                    "LICENSE",
                     ".claude-plugin/plugin.json",
                     ".claude-plugin/marketplace.json",
                     "sample-skill/SKILL.md",
@@ -85,6 +87,7 @@ class ReleaseMetadata(unittest.TestCase):
             self.assertEqual(
                 json.loads(archive.read(".claude-plugin/plugin.json")), self.plugin
             )
+            self.assertEqual(archive.read("LICENSE"), b"Test license notice.\n")
 
     def test_rejects_version_drift_and_wrong_skill_location(self):
         for field, value in (("version", "0.1.0"), ("skills", ["./missing/"])):

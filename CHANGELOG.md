@@ -12,6 +12,7 @@
 - Add three Lean 4 code skills for refactoring, weakness analysis, and idiomaticity review, with checked examples and reuse of the host checker.
 - Add Pyright standard-mode checks for all Python files to project tooling, push/pull request CI, and release validation; fix helper typing and module-loader diagnostics.
 - Add Claude Code plugin and marketplace metadata, installation instructions, and validated metadata inclusion in release archives.
+- Add the MIT license with Yehor Smoliakov as copyright holder, declare it in project/plugin metadata, and include it in release archives.
 
 ## v0.1.0
 

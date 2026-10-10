@@ -14,8 +14,16 @@ concurrency:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    name: validate (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     timeout-minutes: 15
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -32,6 +40,7 @@ jobs:
           python -m pip install
           'PyYAML==6.0.3' 'ruff==0.16.10' 'pyright==1.1.414'
           sympy numpy scipy networkx statsmodels matplotlib z3-solver pyscipopt
+          nbformat nbclient ipykernel
 
       - name: Lint Python scripts
         run: ruff check
@@ -40,20 +49,23 @@ jobs:
         run: pyright --warnings
 
       - name: Check syntax of all tracked Python files
+        shell: python
         run: |
-          python - <<'PY'
           import subprocess
           from pathlib import Path
 
           paths = subprocess.check_output(
               ["git", "ls-files", "-z", "--", "*.py"]
-          ).decode().split("\0")
+          ).decode("utf-8").split("\0")
           for path in filter(None, paths):
               compile(Path(path).read_bytes(), path, "exec")
-          PY
 
       - name: Validate skill metadata, links, and release packaging
-        run: python -B scripts/release_skills.py --output "$RUNNER_TEMP/math-skills.zip"
+        env:
+          SKILL_ARCHIVE: ${{ runner.temp }}/math-skills.zip
+        run: python -B scripts/release_skills.py --output "$SKILL_ARCHIVE"
 
       - name: Run helper regression tests
-        run: python -B -m unittest discover -s tests -v
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python -B -X utf8=0 -m unittest discover -s tests -v

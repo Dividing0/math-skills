@@ -83,9 +83,18 @@ Configurable helpers accept JSON with `--input`, provide a sample request with `
 For example, generate and run a Chinese remainder theorem request:
 
 ```sh
-python research-number-theory/scripts/integer_tools.py --example > /tmp/crt.json
-python research-number-theory/scripts/integer_tools.py --input /tmp/crt.json
+python research-number-theory/scripts/integer_tools.py --example > crt.json
+python research-number-theory/scripts/integer_tools.py --input crt.json
 ```
+
+On Windows PowerShell, select UTF-8 explicitly when creating the request:
+
+```powershell
+python research-number-theory/scripts/integer_tools.py --example | Set-Content -Encoding utf8 crt.json
+python research-number-theory/scripts/integer_tools.py --input crt.json
+```
+
+File inputs accept UTF-8 with or without a BOM. Invoke helpers with `python`; executable permission bits and Unix shebangs are not required on Windows. See [platform verification and limitations](docs/platform-compatibility.md).
 
 ## Development
 
@@ -105,18 +114,20 @@ Pyright checks all repository Python files in standard mode. Scientific runtimes
 Run the helper regression suite in an isolated dependency environment:
 
 ```sh
-uv run --with pyyaml --with sympy --with numpy --with scipy --with networkx --with statsmodels --with matplotlib --with z3-solver --with pyscipopt python -m unittest discover -s tests -v
+uv run --with pyyaml --with sympy --with numpy --with scipy --with networkx --with statsmodels --with matplotlib --with z3-solver --with pyscipopt --with nbformat --with nbclient --with ipykernel python -m unittest discover -s tests -v
 ```
 
 Lean integration tests also run when Elan and a Lean 4 toolchain are installed; otherwise they are skipped. They use installed toolchains without downloading one and check proof audits, macros, and positive/negative fixtures. An installed but broken toolchain fails the checks.
 
 ### Continuous integration
 
-The [CI workflow](.github/workflows/ci.yml) runs on every push and pull request and supports manual runs. It checks:
+The [CI workflow](.github/workflows/ci.yml) runs on every push and pull request and supports manual runs. Its Python 3.14 matrix uses `ubuntu-latest`, `windows-latest`, and `macos-latest`, with independent results for each platform. It checks:
 
 - Python lint, types, and syntax.
 - Skill metadata, Claude plugin/catalog consistency, links, and release packaging.
 - Helper regression tests.
+
+The platform regressions exercise UTF-8 and BOM inputs under a legacy locale, Unicode paths, process arguments and diagnostics, temporary-file cleanup, notebook execution, and ZIP round trips. Missing optional scientific runtimes are reported as skips, not successful runtime checks.
 
 ## Releases
 

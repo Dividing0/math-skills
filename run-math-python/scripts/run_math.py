@@ -42,6 +42,7 @@ def run(script, out, python, timeout, packages=(), seed=0, arguments=()):
             [python, "-c", probe, *packages],
             capture_output=True,
             text=True,
+            encoding="utf-8",
             timeout=10,
             check=True,
         )
@@ -93,7 +94,7 @@ def run(script, out, python, timeout, packages=(), seed=0, arguments=()):
         "evidence_scope": "execution outcome only; mathematical validity must be checked separately",
         "artifacts": ["source.py", "stdout.txt", "stderr.txt", "run.json"],
     }
-    (out / "run.json").write_text(json.dumps(result, indent=2))
+    (out / "run.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
     return result
 
 
@@ -106,7 +107,7 @@ def self_test(python):
         )
         good = run(script, root / "good", python, 5, ["numpy"], 13)
         assert good["status"] == "completed"
-        assert json.loads((root / "good/stdout.txt").read_text()) == {
+        assert json.loads((root / "good/stdout.txt").read_text(encoding="utf-8")) == {
             "value": 42,
             "seed": "13",
         }
@@ -116,7 +117,9 @@ def self_test(python):
         )
         bad = run(script, root / "bad", python, 5)
         assert bad["status"] == "failed" and bad["returncode"] == 7
-        assert "intentional failure" in (root / "bad/stderr.txt").read_text()
+        assert "intentional failure" in (root / "bad/stderr.txt").read_text(
+            encoding="utf-8"
+        )
         script.write_text("import time; time.sleep(10)")
         slow = run(script, root / "slow", python, 0.2)
         assert slow["status"] == "timeout"

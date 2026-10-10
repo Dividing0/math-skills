@@ -172,7 +172,11 @@ def main():
         print(json.dumps(EXAMPLE, indent=2))
         return 0
     try:
-        source = sys.stdin.read() if args.input == "-" else Path(args.input).read_text()
+        source = (
+            sys.stdin.read()
+            if args.input == "-"
+            else Path(args.input).read_text(encoding="utf-8-sig")
+        )
         data = json.loads(source, parse_constant=reject_constant)
         if not isinstance(data, dict):
             raise TypeError("input must be a JSON object")

@@ -15,8 +15,8 @@ from pathlib import Path
 
 try:
     import nbformat
-    from jupyter_client import KernelManager
     from jupyter_client.kernelspec import KernelSpecManager
+    from jupyter_client.manager import KernelManager
     from nbclient import NotebookClient
 except ImportError:
     sys.exit("dependency_unavailable: nbformat/nbclient/jupyter-client/ipykernel")
@@ -41,7 +41,8 @@ def execute(output=None):
                     "display_name": "Temporary mathematical execution",
                     "language": "python",
                 }
-            )
+            ),
+            encoding="utf-8",
         )
         specifications = KernelSpecManager(kernel_dirs=[str(kernels)])
         manager = KernelManager(
@@ -67,7 +68,9 @@ def execute(output=None):
             allow_errors=False,
             resources={"metadata": {"path": str(root)}},
         )
-        completed = client.execute()
+        # Passing our manager makes nbclient treat it as externally owned. The
+        # kernel and channels must close before Windows can remove its cwd.
+        completed = client.execute(cleanup_kc=True)
         first = json.loads(completed.cells[0].outputs[0].text)
         last = json.loads(completed.cells[1].outputs[0].text)
         assert Path(first["executable"]).resolve() == Path(

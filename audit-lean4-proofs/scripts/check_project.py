@@ -49,6 +49,8 @@ def compute(data):
                 command,
                 cwd=project,
                 text=True,
+                encoding="utf-8",
+                errors="replace",
                 capture_output=True,
                 timeout=timeout,
                 check=False,
@@ -88,7 +90,12 @@ def compute(data):
                 "theorem audits require modules to import; build those modules first"
             )
         with tempfile.NamedTemporaryFile(
-            mode="w", suffix=".lean", prefix="SkillAudit", dir=project, delete=False
+            mode="w",
+            encoding="utf-8",
+            suffix=".lean",
+            prefix="SkillAudit",
+            dir=project,
+            delete=False,
         ) as scratch:
             scratch.write("".join(f"import {name}\n" for name in modules))
             scratch.write(
@@ -101,7 +108,7 @@ def compute(data):
             path.unlink(missing_ok=True)
     text = "\n".join(record["stdout"] + "\n" + record["stderr"] for record in records)
     return {
-        "toolchain": (project / "lean-toolchain").read_text().strip(),
+        "toolchain": (project / "lean-toolchain").read_text(encoding="utf-8").strip(),
         "checks": records,
         "checker_success": all(record["returncode"] == 0 for record in records),
         "sorry_marker_detected": bool(
@@ -122,7 +129,11 @@ def main():
         print(json.dumps(EXAMPLE, indent=2))
         return 0
     try:
-        source = sys.stdin.read() if args.input == "-" else Path(args.input).read_text()
+        source = (
+            sys.stdin.read()
+            if args.input == "-"
+            else Path(args.input).read_text(encoding="utf-8-sig")
+        )
         data = json.loads(source, parse_constant=reject_constant)
         if not isinstance(data, dict):
             raise TypeError("input must be a JSON object")

@@ -5,6 +5,7 @@ import subprocess
 import tempfile
 import unittest
 from pathlib import Path
+from urllib.parse import quote
 from zipfile import ZipFile
 
 from scripts.release_skills import package, validate_claude_metadata
@@ -14,7 +15,8 @@ class ReleaseMetadata(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.root = Path(temporary.name)
+        self.root = Path(temporary.name) / "repo з пробілом & дані"
+        self.root.mkdir()
         self.plugin = {
             "name": "math-skills",
             "version": "0.2.0",
@@ -51,7 +53,7 @@ class ReleaseMetadata(unittest.TestCase):
     def write(self, name, content):
         path = self.root / name
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(content)
+        path.write_text(content, encoding="utf-8", newline="\n")
 
     def track(self):
         subprocess.run(["git", "add", "--all"], cwd=self.root, check=True)
@@ -113,6 +115,27 @@ class ReleaseMetadata(unittest.TestCase):
         )
         with self.assertRaisesRegex(ValueError, "must be tracked"):
             package(self.root, self.root / "release.zip")
+
+    def test_crlf_unicode_git_paths_and_zip_round_trip(self):
+        name = "sample-skill/references/дані з пробілом.md"
+        content = "Є Ё ∀ — preserved UTF-8\r\n".encode()
+        (self.root / name).write_bytes(content)
+        skill = self.root / "sample-skill/SKILL.md"
+        source = skill.read_text(encoding="utf-8")
+        source += f"\nRead [Unicode data]({quote('references/дані з пробілом.md')}).\n"
+        skill.write_bytes(source.replace("\n", "\r\n").encode("utf-8"))
+        self.track()
+        output = self.root / "nested" / "архів з пробілом.zip"
+        package(self.root, output)
+        with ZipFile(output) as archive:
+            self.assertIsNone(archive.testzip())
+            self.assertIn(name, archive.namelist())
+            self.assertTrue(all("\\" not in path for path in archive.namelist()))
+            self.assertEqual(archive.read(name), content)
+            self.assertEqual(archive.read("sample-skill/SKILL.md"), skill.read_bytes())
+            extracted = self.root / "unpacked"
+            archive.extractall(extracted)
+        self.assertEqual((extracted / name).read_bytes(), content)
 
 
 if __name__ == "__main__":

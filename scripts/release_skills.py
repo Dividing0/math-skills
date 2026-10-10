@@ -36,7 +36,7 @@ def included(path):
 
 
 def read_mapping(path):
-    data = yaml.safe_load(path.read_text())
+    data = yaml.safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
         raise TypeError(f"{path}: expected a YAML mapping")
     return data
@@ -44,7 +44,7 @@ def read_mapping(path):
 
 def validate_skill(root, skill, files):
     path = root / skill / "SKILL.md"
-    source = path.read_text()
+    source = path.read_text(encoding="utf-8")
     match = re.match(r"\A---\n(.*?)\n---(?:\n|\Z)", source, re.DOTALL)
     if not match:
         raise ValueError(f"{path}: missing YAML frontmatter")
@@ -83,7 +83,9 @@ def validate_links(root, files):
     for path in sorted(files):
         if path.suffix != ".md":
             continue
-        for target in re.findall(r"\]\(([^)]+)\)", (root / path).read_text()):
+        for target in re.findall(
+            r"\]\(([^)]+)\)", (root / path).read_text(encoding="utf-8")
+        ):
             link = urlsplit(target.strip("<>"))
             if link.scheme or link.netloc or not link.path:
                 continue
@@ -98,9 +100,15 @@ def validate_links(root, files):
 
 def validate_claude_metadata(root):
     """Check the root plugin/catalog contract and keep the release version aligned."""
-    plugin = json.loads((root / ".claude-plugin/plugin.json").read_text())
-    marketplace = json.loads((root / ".claude-plugin/marketplace.json").read_text())
-    project = tomllib.loads((root / "pyproject.toml").read_text())["project"]
+    plugin = json.loads(
+        (root / ".claude-plugin/plugin.json").read_text(encoding="utf-8")
+    )
+    marketplace = json.loads(
+        (root / ".claude-plugin/marketplace.json").read_text(encoding="utf-8")
+    )
+    project = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))[
+        "project"
+    ]
     if not isinstance(plugin, dict) or not isinstance(marketplace, dict):
         raise TypeError("Claude metadata must contain JSON objects")
     if plugin.get("name") != project["name"]:
@@ -142,7 +150,7 @@ def package(root, output):
     root = root.resolve()
     tracked = (
         subprocess.check_output(["git", "ls-files", "-z"], cwd=root)
-        .decode()
+        .decode("utf-8")
         .split("\0")
     )
     skills = sorted(

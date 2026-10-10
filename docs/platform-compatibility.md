@@ -6,6 +6,15 @@ Issue [#10](https://github.com/Dividing0/math-skills/issues/10) adds native Wind
 
 The [CI workflow](../.github/workflows/ci.yml) runs the same checks on Python 3.14 on `ubuntu-latest`, `windows-latest`, and `macos-latest`, with `fail-fast: false`. Every platform runs Ruff, Pyright, compilation of all tracked Python files, metadata/link validation, release packaging, and the regression suite. See each Actions job's setup logs for its actual OS image, architecture, and Python patch version; runner labels can change over time.
 
+These environments were exercised on 10 October 2026. The [PR #11 checks](https://github.com/Dividing0/math-skills/pull/11/checks) record the latest results; the [initial native run](https://github.com/Dividing0/math-skills/actions/runs/38069776133) reproduced the Windows notebook cleanup failure described below.
+
+| Environment | OS / architecture | Python |
+| --- | --- | --- |
+| Local checks | Linux x86-64, glibc 2.39 | CPython 3.14.7 |
+| `ubuntu-latest` | Ubuntu 24.04.5, x86-64 | CPython 3.14.8 |
+| `windows-latest` | Windows Server 2025, build 10.0.26100, x64 | CPython 3.14.7 |
+| `macos-latest` | macOS 26.6.2, ARM64 | CPython 3.14.7 |
+
 | Boundary | Actual regression coverage |
 | --- | --- |
 | Script entry points | `python <script> --help` for every skill helper and the packager |
@@ -28,6 +37,7 @@ The legacy-locale tests disable Python's UTF-8 mode and set the text locale to `
 - The workflow specifies Bash for shell steps, uses the Python shell for syntax checking, and supplies the archive path through a quoted environment variable. It does not rely on PowerShell interpreting Bash heredocs or variable syntax.
 - ZIP fixtures write deliberate LF bytes; another fixture deliberately uses CRLF. Packaging retains the checked-out resource bytes rather than normalizing them.
 - Installing the notebook dependencies exposed a Pyright private-import error. `KernelManager` now comes from its public `jupyter_client.manager` module.
+- Native Windows CI reproduced `WinError 32` when a live notebook kernel held the temporary working directory open. The notebook helper now explicitly asks nbclient to shut down its externally supplied kernel manager and channels before removing that directory. POSIX also closes the kernel instead of leaving it alive until process exit.
 
 ## Running on Windows
 
@@ -50,4 +60,4 @@ Input files must be UTF-8, optionally with a BOM; UTF-16 files are not accepted.
 - A host that prohibits local sockets cannot run a notebook kernel. The regression reports that specific restriction as a skip; native CI runners must execute it when sockets are available.
 - On Windows, the process runner terminates the direct child on timeout; it does not promise termination of descendant processes. POSIX uses a process group. This existing behavior is unchanged.
 - ZIP paths are portable, but archive byte identity across checkouts is not promised: Git newline conversion, file metadata, and ZIP timestamps may differ. No release is published by the CI matrix.
-- Windows ARM64, alternative Python implementations, older Python versions, network shares, paths beyond platform limits, and unavailable optional native dependencies have not been verified.
+- Desktop Windows 10/11, Windows ARM64, alternative Python implementations, older Python versions, network shares, paths beyond platform limits, and unavailable optional native dependencies have not been verified.

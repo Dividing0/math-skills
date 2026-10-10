@@ -297,7 +297,9 @@ class NativeProcesses(unittest.TestCase):
                 self.skipTest(f"Host forbids local kernel sockets: {exc}")
         tool = load("run-math-python", "notebook_example.py")
         original = tempfile.TemporaryDirectory
+        original_manager = tool.KernelManager
         created = []
+        managers = []
 
         def temporary(*args, **kwargs):
             kwargs["prefix"] = "math kernel Є "
@@ -305,10 +307,18 @@ class NativeProcesses(unittest.TestCase):
             created.append(Path(folder.name))
             return folder
 
+        def manager(*args, **kwargs):
+            kernel = original_manager(*args, **kwargs)
+            managers.append(kernel)
+            return kernel
+
         with original() as directory:
             output = Path(directory) / "нотатник з пробілом.ipynb"
-            with patch.object(
-                tool.tempfile, "TemporaryDirectory", side_effect=temporary
+            with (
+                patch.object(
+                    tool.tempfile, "TemporaryDirectory", side_effect=temporary
+                ),
+                patch.object(tool, "KernelManager", side_effect=manager),
             ):
                 result = tool.execute(str(output))
             self.assertEqual(result["value"], 42)
@@ -320,6 +330,8 @@ class NativeProcesses(unittest.TestCase):
             self.assertTrue(all(cell["execution_count"] for cell in cells))
         self.assertTrue(created)
         self.assertTrue(all(not path.exists() for path in created))
+        self.assertTrue(managers)
+        self.assertTrue(all(not kernel.has_kernel for kernel in managers))
 
 
 class ReleaseProcess(unittest.TestCase):

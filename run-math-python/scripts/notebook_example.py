@@ -68,7 +68,9 @@ def execute(output=None):
             allow_errors=False,
             resources={"metadata": {"path": str(root)}},
         )
-        completed = client.execute()
+        # Passing our manager makes nbclient treat it as externally owned. The
+        # kernel and channels must close before Windows can remove its cwd.
+        completed = client.execute(cleanup_kc=True)
         first = json.loads(completed.cells[0].outputs[0].text)
         last = json.loads(completed.cells[1].outputs[0].text)
         assert Path(first["executable"]).resolve() == Path(

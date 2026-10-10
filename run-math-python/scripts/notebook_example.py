@@ -15,8 +15,8 @@ from pathlib import Path
 
 try:
     import nbformat
-    from jupyter_client import KernelManager
     from jupyter_client.kernelspec import KernelSpecManager
+    from jupyter_client.manager import KernelManager
     from nbclient import NotebookClient
 except ImportError:
     sys.exit("dependency_unavailable: nbformat/nbclient/jupyter-client/ipykernel")
@@ -41,7 +41,8 @@ def execute(output=None):
                     "display_name": "Temporary mathematical execution",
                     "language": "python",
                 }
-            )
+            ),
+            encoding="utf-8",
         )
         specifications = KernelSpecManager(kernel_dirs=[str(kernels)])
         manager = KernelManager(
